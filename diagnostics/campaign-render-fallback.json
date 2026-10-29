@@ -1,0 +1,15 @@
+{
+  "checks": [
+    {
+      "case": "WebGL unavailable",
+      "visible": 5377,
+      "movement": true
+    },
+    {
+      "case": "live loss of both contexts",
+      "visible": 5377,
+      "movement": true
+    }
+  ],
+  "errors": []
+}

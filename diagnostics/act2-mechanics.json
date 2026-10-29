@@ -1,0 +1,46 @@
+{
+  "cameraRelativeMovement": true,
+  "mouseOrbitZoom": true,
+  "reverseView": true,
+  "gestures": {
+    "aleksPartner": true,
+    "aleksSelf": true,
+    "sandraPartner": true,
+    "sandraSelf": true,
+    "cooldown": true
+  },
+  "items": [
+    {
+      "id": "rem",
+      "owner": "aleks",
+      "passed": true
+    },
+    {
+      "id": "paper",
+      "owner": "aleks",
+      "passed": true
+    },
+    {
+      "id": "food",
+      "owner": "aleks",
+      "passed": true
+    },
+    {
+      "id": "fork",
+      "owner": "aleks",
+      "passed": true
+    },
+    {
+      "id": "gouda",
+      "owner": "aleks",
+      "passed": true
+    },
+    {
+      "id": "tom",
+      "owner": "sandra",
+      "passed": true
+    }
+  ],
+  "reset": true,
+  "errors": []
+}

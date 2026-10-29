@@ -1,0 +1,56 @@
+{
+  "reports": [
+    {
+      "mode": "duel",
+      "restored": "duel",
+      "passed": true
+    },
+    {
+      "mode": "karaoke",
+      "restored": "karaoke",
+      "passed": true
+    },
+    {
+      "mode": "animal",
+      "restored": "iga",
+      "passed": true
+    },
+    {
+      "mode": "zoo",
+      "restored": "zoo-ready",
+      "passed": true
+    },
+    {
+      "mode": "road",
+      "restored": "return",
+      "passed": true
+    },
+    {
+      "mode": "training",
+      "restored": "training",
+      "passed": true
+    },
+    {
+      "mode": "prepare",
+      "restored": "prepare",
+      "passed": true
+    },
+    {
+      "mode": "boss",
+      "restored": "boss",
+      "passed": true
+    },
+    {
+      "mode": "trance",
+      "restored": "trance",
+      "passed": true
+    },
+    {
+      "mode": "ritual",
+      "restored": "ritual",
+      "passed": true
+    }
+  ],
+  "corruptRejected": true,
+  "errors": []
+}

@@ -1,0 +1,943 @@
+{
+  "loadouts": [
+    {
+      "aleks": "rem",
+      "sandra": "rem"
+    },
+    {
+      "aleks": "rem",
+      "sandra": "paper"
+    },
+    {
+      "aleks": "rem",
+      "sandra": "food"
+    },
+    {
+      "aleks": "rem",
+      "sandra": "fork"
+    },
+    {
+      "aleks": "rem",
+      "sandra": "gouda"
+    },
+    {
+      "aleks": "rem",
+      "sandra": "pen"
+    },
+    {
+      "aleks": "rem",
+      "sandra": "tom"
+    },
+    {
+      "aleks": "paper",
+      "sandra": "rem"
+    },
+    {
+      "aleks": "paper",
+      "sandra": "paper"
+    },
+    {
+      "aleks": "paper",
+      "sandra": "food"
+    },
+    {
+      "aleks": "paper",
+      "sandra": "fork"
+    },
+    {
+      "aleks": "paper",
+      "sandra": "gouda"
+    },
+    {
+      "aleks": "paper",
+      "sandra": "pen"
+    },
+    {
+      "aleks": "paper",
+      "sandra": "tom"
+    },
+    {
+      "aleks": "food",
+      "sandra": "rem"
+    },
+    {
+      "aleks": "food",
+      "sandra": "paper"
+    },
+    {
+      "aleks": "food",
+      "sandra": "food"
+    },
+    {
+      "aleks": "food",
+      "sandra": "fork"
+    },
+    {
+      "aleks": "food",
+      "sandra": "gouda"
+    },
+    {
+      "aleks": "food",
+      "sandra": "pen"
+    },
+    {
+      "aleks": "food",
+      "sandra": "tom"
+    },
+    {
+      "aleks": "fork",
+      "sandra": "rem"
+    },
+    {
+      "aleks": "fork",
+      "sandra": "paper"
+    },
+    {
+      "aleks": "fork",
+      "sandra": "food"
+    },
+    {
+      "aleks": "fork",
+      "sandra": "fork"
+    },
+    {
+      "aleks": "fork",
+      "sandra": "gouda"
+    },
+    {
+      "aleks": "fork",
+      "sandra": "pen"
+    },
+    {
+      "aleks": "fork",
+      "sandra": "tom"
+    },
+    {
+      "aleks": "gouda",
+      "sandra": "rem"
+    },
+    {
+      "aleks": "gouda",
+      "sandra": "paper"
+    },
+    {
+      "aleks": "gouda",
+      "sandra": "food"
+    },
+    {
+      "aleks": "gouda",
+      "sandra": "fork"
+    },
+    {
+      "aleks": "gouda",
+      "sandra": "gouda"
+    },
+    {
+      "aleks": "gouda",
+      "sandra": "pen"
+    },
+    {
+      "aleks": "gouda",
+      "sandra": "tom"
+    },
+    {
+      "aleks": "pen",
+      "sandra": "rem"
+    },
+    {
+      "aleks": "pen",
+      "sandra": "paper"
+    },
+    {
+      "aleks": "pen",
+      "sandra": "food"
+    },
+    {
+      "aleks": "pen",
+      "sandra": "fork"
+    },
+    {
+      "aleks": "pen",
+      "sandra": "gouda"
+    },
+    {
+      "aleks": "pen",
+      "sandra": "pen"
+    },
+    {
+      "aleks": "pen",
+      "sandra": "tom"
+    }
+  ],
+  "quizzes": [
+    {
+      "victim": "gabrys",
+      "items": {
+        "aleks": "fork",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 0,
+        "sandra": 0
+      },
+      "passed": true
+    },
+    {
+      "victim": "gabrys",
+      "items": {
+        "aleks": "fork",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 0,
+        "sandra": 1
+      },
+      "passed": true
+    },
+    {
+      "victim": "gabrys",
+      "items": {
+        "aleks": "fork",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 0,
+        "sandra": 2
+      },
+      "passed": true
+    },
+    {
+      "victim": "gabrys",
+      "items": {
+        "aleks": "fork",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 0,
+        "sandra": 3
+      },
+      "passed": true
+    },
+    {
+      "victim": "gabrys",
+      "items": {
+        "aleks": "pen",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 1,
+        "sandra": 0
+      },
+      "passed": true
+    },
+    {
+      "victim": "gabrys",
+      "items": {
+        "aleks": "pen",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 1,
+        "sandra": 1
+      },
+      "passed": true
+    },
+    {
+      "victim": "gabrys",
+      "items": {
+        "aleks": "pen",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 1,
+        "sandra": 2
+      },
+      "passed": true
+    },
+    {
+      "victim": "gabrys",
+      "items": {
+        "aleks": "pen",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 1,
+        "sandra": 3
+      },
+      "passed": true
+    },
+    {
+      "victim": "gabrys",
+      "items": {
+        "aleks": "fork",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 2,
+        "sandra": 0
+      },
+      "passed": true
+    },
+    {
+      "victim": "gabrys",
+      "items": {
+        "aleks": "fork",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 2,
+        "sandra": 1
+      },
+      "passed": true
+    },
+    {
+      "victim": "gabrys",
+      "items": {
+        "aleks": "fork",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 2,
+        "sandra": 2
+      },
+      "passed": true
+    },
+    {
+      "victim": "gabrys",
+      "items": {
+        "aleks": "fork",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 2,
+        "sandra": 3
+      },
+      "passed": true
+    },
+    {
+      "victim": "gabrys",
+      "items": {
+        "aleks": "pen",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 3,
+        "sandra": 0
+      },
+      "passed": true
+    },
+    {
+      "victim": "gabrys",
+      "items": {
+        "aleks": "pen",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 3,
+        "sandra": 1
+      },
+      "passed": true
+    },
+    {
+      "victim": "gabrys",
+      "items": {
+        "aleks": "pen",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 3,
+        "sandra": 2
+      },
+      "passed": true
+    },
+    {
+      "victim": "gabrys",
+      "items": {
+        "aleks": "pen",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 3,
+        "sandra": 3
+      },
+      "passed": true
+    },
+    {
+      "victim": "weronika",
+      "items": {
+        "aleks": "fork",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 0,
+        "sandra": 0
+      },
+      "passed": true
+    },
+    {
+      "victim": "weronika",
+      "items": {
+        "aleks": "fork",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 0,
+        "sandra": 1
+      },
+      "passed": true
+    },
+    {
+      "victim": "weronika",
+      "items": {
+        "aleks": "fork",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 0,
+        "sandra": 2
+      },
+      "passed": true
+    },
+    {
+      "victim": "weronika",
+      "items": {
+        "aleks": "fork",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 0,
+        "sandra": 3
+      },
+      "passed": true
+    },
+    {
+      "victim": "weronika",
+      "items": {
+        "aleks": "pen",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 1,
+        "sandra": 0
+      },
+      "passed": true
+    },
+    {
+      "victim": "weronika",
+      "items": {
+        "aleks": "pen",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 1,
+        "sandra": 1
+      },
+      "passed": true
+    },
+    {
+      "victim": "weronika",
+      "items": {
+        "aleks": "pen",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 1,
+        "sandra": 2
+      },
+      "passed": true
+    },
+    {
+      "victim": "weronika",
+      "items": {
+        "aleks": "pen",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 1,
+        "sandra": 3
+      },
+      "passed": true
+    },
+    {
+      "victim": "weronika",
+      "items": {
+        "aleks": "fork",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 2,
+        "sandra": 0
+      },
+      "passed": true
+    },
+    {
+      "victim": "weronika",
+      "items": {
+        "aleks": "fork",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 2,
+        "sandra": 1
+      },
+      "passed": true
+    },
+    {
+      "victim": "weronika",
+      "items": {
+        "aleks": "fork",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 2,
+        "sandra": 2
+      },
+      "passed": true
+    },
+    {
+      "victim": "weronika",
+      "items": {
+        "aleks": "fork",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 2,
+        "sandra": 3
+      },
+      "passed": true
+    },
+    {
+      "victim": "weronika",
+      "items": {
+        "aleks": "pen",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 3,
+        "sandra": 0
+      },
+      "passed": true
+    },
+    {
+      "victim": "weronika",
+      "items": {
+        "aleks": "pen",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 3,
+        "sandra": 1
+      },
+      "passed": true
+    },
+    {
+      "victim": "weronika",
+      "items": {
+        "aleks": "pen",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 3,
+        "sandra": 2
+      },
+      "passed": true
+    },
+    {
+      "victim": "weronika",
+      "items": {
+        "aleks": "pen",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 3,
+        "sandra": 3
+      },
+      "passed": true
+    },
+    {
+      "victim": "boris",
+      "items": {
+        "aleks": "fork",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 0,
+        "sandra": 0
+      },
+      "passed": true
+    },
+    {
+      "victim": "boris",
+      "items": {
+        "aleks": "fork",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 0,
+        "sandra": 1
+      },
+      "passed": true
+    },
+    {
+      "victim": "boris",
+      "items": {
+        "aleks": "fork",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 0,
+        "sandra": 2
+      },
+      "passed": true
+    },
+    {
+      "victim": "boris",
+      "items": {
+        "aleks": "fork",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 0,
+        "sandra": 3
+      },
+      "passed": true
+    },
+    {
+      "victim": "boris",
+      "items": {
+        "aleks": "pen",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 1,
+        "sandra": 0
+      },
+      "passed": true
+    },
+    {
+      "victim": "boris",
+      "items": {
+        "aleks": "pen",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 1,
+        "sandra": 1
+      },
+      "passed": true
+    },
+    {
+      "victim": "boris",
+      "items": {
+        "aleks": "pen",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 1,
+        "sandra": 2
+      },
+      "passed": true
+    },
+    {
+      "victim": "boris",
+      "items": {
+        "aleks": "pen",
+        "sandra": "tom"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 1,
+        "sandra": 3
+      },
+      "passed": true
+    },
+    {
+      "victim": "boris",
+      "items": {
+        "aleks": "fork",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 2,
+        "sandra": 0
+      },
+      "passed": true
+    },
+    {
+      "victim": "boris",
+      "items": {
+        "aleks": "fork",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 2,
+        "sandra": 1
+      },
+      "passed": true
+    },
+    {
+      "victim": "boris",
+      "items": {
+        "aleks": "fork",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 2,
+        "sandra": 2
+      },
+      "passed": true
+    },
+    {
+      "victim": "boris",
+      "items": {
+        "aleks": "fork",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 2,
+        "sandra": 3
+      },
+      "passed": true
+    },
+    {
+      "victim": "boris",
+      "items": {
+        "aleks": "pen",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 3,
+        "sandra": 0
+      },
+      "passed": true
+    },
+    {
+      "victim": "boris",
+      "items": {
+        "aleks": "pen",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 0
+      },
+      "animals": {
+        "aleks": 3,
+        "sandra": 1
+      },
+      "passed": true
+    },
+    {
+      "victim": "boris",
+      "items": {
+        "aleks": "pen",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 0,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 3,
+        "sandra": 2
+      },
+      "passed": true
+    },
+    {
+      "victim": "boris",
+      "items": {
+        "aleks": "pen",
+        "sandra": "pen"
+      },
+      "trust": {
+        "aleks": 1,
+        "sandra": 1
+      },
+      "animals": {
+        "aleks": 3,
+        "sandra": 3
+      },
+      "passed": true
+    }
+  ],
+  "errors": []
+}

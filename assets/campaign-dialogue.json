@@ -1,0 +1,572 @@
+{
+  "e1_intro": [
+    [
+      "Sandra",
+      "Aleks, chyba naprawdę wygraliśmy."
+    ],
+    [
+      "Aleks",
+      "To może w końcu pójdziemy do domu?"
+    ],
+    [
+      "Dynia",
+      "Wygraliście?"
+    ],
+    [
+      "Sandra",
+      "Pokonaliśmy Toma."
+    ],
+    [
+      "Dynia",
+      "Owszem. Ale ja nie powiedziałam, że Tom jest końcem."
+    ],
+    [
+      "Aleks",
+      "Ty pierdolona dynio, czemu nas tu wciągnęłaś?!"
+    ],
+    [
+      "Dynia",
+      "Ostrzegałam was. Prawdę mówiąc, zawsze ostrzegam."
+    ],
+    [
+      "Sandra",
+      "Po co, skoro to pułapka?"
+    ],
+    [
+      "Dynia",
+      "Bo strach uruchamia historię. A nadzieja każe w nią wejść."
+    ],
+    [
+      "Dynia",
+      "Każda para dostaje wybory. Każda wierzy, że wybiera drogę do domu. Nawet kiedy zabija Toma, nadal gra według moich zasad."
+    ],
+    [
+      "Aleks",
+      "To teraz złamię ci tę zasadę."
+    ],
+    [
+      "Dynia",
+      "Spróbuj."
+    ],
+    [
+      "Dynia",
+      "Ktoś musi leżeć przy drodze. Ktoś musi jeszcze oddychać na krzyżu."
+    ],
+    [
+      "Sandra",
+      "Czyje miejsca?"
+    ],
+    [
+      "Dynia",
+      "Tych, których spotkaliście na początku."
+    ]
+  ],
+  "e1_tragedy": [
+    [
+      "Aleks",
+      "Sandra?! SANDRA, KURWA, WSTAWAJ!"
+    ],
+    [
+      "Sandra",
+      "Aleks… nie pozwól, żeby…"
+    ],
+    [
+      "Aleks",
+      "Nie, nie, nie. Patrz na mnie. Sandra!"
+    ],
+    [
+      "Aleks",
+      "Mieliśmy stąd wyjść razem."
+    ],
+    [
+      "Dynia",
+      "Jedno ciało, żeby wzbudzić strach. Jeden żywy, żeby wzbudzić nadzieję."
+    ],
+    [
+      "Aleks",
+      "Ty pierdolona dynio…"
+    ],
+    [
+      "Dynia",
+      "Do zobaczenia w następnym rozdziale."
+    ]
+  ],
+  "e1_newPair": [
+    [
+      "Salsa",
+      "Alex, gdzie my w ogóle jesteśmy?"
+    ],
+    [
+      "Alex (X)",
+      "Nie wiem. Ale chyba tam jest jakiś cmentarz."
+    ],
+    [
+      "Dynia",
+      "Alex! Salsa! Za późno… On nadchodzi… To… to nadchodzi! Biegnij!"
+    ],
+    [
+      "Salsa",
+      "Czemu do nas mówi dynia?"
+    ],
+    [
+      "Alex (X)",
+      "Nie wiem, kurwa, ale idziemy."
+    ],
+    [
+      "Salsa",
+      "Alex… co to jest?"
+    ],
+    [
+      "Alex (X)",
+      "Nie dotykaj. Idźmy po pomoc."
+    ],
+    [
+      "Alex (X)",
+      "Kurwa, on żyje!"
+    ],
+    [
+      "Salsa",
+      "Musimy mu pomóc!"
+    ],
+    [
+      "Aleks",
+      "Uciekajcie…"
+    ],
+    [
+      "Alex (X)",
+      "Co?"
+    ],
+    [
+      "Aleks",
+      "My też… myśleliśmy, że jesteśmy pierwsi…"
+    ],
+    [
+      "Aleks",
+      "Umieram!"
+    ]
+  ],
+  "hospital": [
+    [
+      "Gołębie",
+      "ZAMIAUCZ! ZAMIAUCZ!"
+    ],
+    [
+      "Sandra",
+      "Za późno! One są wszędzie!"
+    ],
+    [
+      "Aleks",
+      "Sandra…? To szpital?"
+    ],
+    [
+      "Sandra",
+      "Pamiętam samochód. Wyszliśmy z imprezy… potem światła."
+    ],
+    [
+      "Aleks",
+      "A cmentarz? Żółwie? Gołębie?"
+    ],
+    [
+      "Sandra",
+      "Śniło mi się dokładnie to samo."
+    ],
+    [
+      "Aleks",
+      "To czemu oboje pamiętamy Toma?"
+    ]
+  ],
+  "e3": [
+    [
+      "Tom",
+      "Sandro. Przez całą noc mnie nosiłaś. Nawet kiedy Aleks cię zawiódł."
+    ],
+    [
+      "Sandra",
+      "To tylko pluszak."
+    ],
+    [
+      "Tom",
+      "A jednak nie oddałaś go ani razu."
+    ],
+    [
+      "Tom",
+      "Pamiętasz ziemię? Kto ją na ciebie zasypał?"
+    ],
+    [
+      "Tom",
+      "Sama powiedziałaś, że mu nie ufasz."
+    ],
+    [
+      "Aleks",
+      "Nie słuchaj go. To jest dokładnie to, czego chce."
+    ],
+    [
+      "Tom",
+      "Wybierz: partner, który może cię poświęcić, czy ktoś, kto nigdy nie udawał, że jest dobry."
+    ],
+    [
+      "Tom",
+      "Aleks, cały czas mówisz, że mnie uratujesz. A za każdym razem najpierw muszę ratować siebie."
+    ],
+    [
+      "Aleks",
+      "Sandra, co ty odpierdalasz?"
+    ],
+    [
+      "Sandra",
+      "Wybieram Toma."
+    ],
+    [
+      "Aleks",
+      "Przecież przed chwilą byliśmy razem!"
+    ],
+    [
+      "Tom",
+      "To nie ja cię zdradziłem, Aleks."
+    ],
+    [
+      "Sandra",
+      "To ja. W końcu coś wybrałam sama."
+    ],
+    [
+      "Tom",
+      "Od teraz jesteś panią tej nocy."
+    ],
+    [
+      "Sandra",
+      "To otwieraj bramę. Chcę zobaczyć, co jest za nią."
+    ],
+    [
+      "Dynia",
+      "Jak miło. Znowu ktoś myśli, że awans oznacza wolność."
+    ],
+    [
+      "Sandra",
+      "Co…?"
+    ],
+    [
+      "Dynia",
+      "Koniec obsady. Następny obieg."
+    ]
+  ],
+  "e4": [
+    [
+      "Sandra",
+      "Tom. Po co dalej walczyć? Przecież masz wszystko, czego chciałeś."
+    ],
+    [
+      "Tom",
+      "Nareszcie ktoś rozsądny."
+    ],
+    [
+      "Aleks",
+      "Ty na serio?"
+    ],
+    [
+      "Sandra",
+      "Zaufaj mi. Pierwszy raz bez gadania."
+    ],
+    [
+      "Tom",
+      "Jak widzicie, władza wymaga nie tylko siły, ale także wizji, cierpliwości i fantastycznej skorupy…"
+    ],
+    [
+      "Aleks",
+      "O kurwa, on ma prezentację."
+    ],
+    [
+      "Sandra",
+      "Ciii."
+    ],
+    [
+      "Sandra",
+      "Teraz albo nigdy."
+    ],
+    [
+      "Aleks",
+      "Za całe to zoo, ty żółwiu."
+    ],
+    [
+      "Tom",
+      "To było niegrzeczne."
+    ],
+    [
+      "Sandra",
+      "Witaj w klubie."
+    ],
+    [
+      "Aleks",
+      "Dobra, teraz to już chyba definitywnie."
+    ],
+    [
+      "Dynia",
+      "Zabiłeś rolę, nie reżysera."
+    ],
+    [
+      "Sandra",
+      "Ty też się zaraz doczekasz."
+    ],
+    [
+      "Dynia",
+      "Nie w tej wersji historii."
+    ]
+  ],
+  "e5": [
+    [
+      "Tom",
+      "Lila! Wróć do mnie."
+    ],
+    [
+      "Lila",
+      "Nie."
+    ],
+    [
+      "Aleks",
+      "Okej. Pies mówi. Zaznaczam w dzienniku."
+    ],
+    [
+      "Sandra",
+      "Ona wybrała nas."
+    ],
+    [
+      "Tom",
+      "Sprzedałaś mnie za jedzenie."
+    ],
+    [
+      "Lila",
+      "Za to, że ktoś nie traktował mnie jak narzędzia."
+    ],
+    [
+      "Lila",
+      "Potrafię je utrzymać. Ale kiedy przejdziecie, ktoś musi zostać."
+    ],
+    [
+      "Sandra",
+      "To chodź z nami."
+    ],
+    [
+      "Lila",
+      "Nie mogę. Ale wy możecie."
+    ],
+    [
+      "Aleks",
+      "Nie po to cię karmiliśmy, żeby cię tutaj zostawić."
+    ],
+    [
+      "Lila",
+      "Właśnie dlatego was wypuszczę."
+    ],
+    [
+      "Sandra",
+      "Lila!"
+    ],
+    [
+      "Lila",
+      "Idźcie. Nie pozwólcie, żeby wasza noc zaczęła się od nowa."
+    ],
+    [
+      "Aleks",
+      "Nie ma cmentarza."
+    ],
+    [
+      "Sandra",
+      "Nie ma dyni."
+    ],
+    [
+      "Aleks",
+      "A jej nie ma z nami."
+    ],
+    [
+      "Sandra",
+      "Ale jesteśmy tutaj. Dzięki niej."
+    ]
+  ],
+  "e6": [
+    [
+      "Dynia",
+      "Wystarczy, że jedno z was wyjdzie. Drugie zostaje."
+    ],
+    [
+      "Aleks",
+      "A czemu mamy ci wierzyć?"
+    ],
+    [
+      "Dynia",
+      "Nie musicie. Przecież i tak sobie nie wierzycie."
+    ],
+    [
+      "Sandra",
+      "To nie jest takie proste."
+    ],
+    [
+      "Dynia",
+      "Kto trzymał łopatę? A kto leżał pod ziemią?"
+    ],
+    [
+      "Sandra",
+      "Cały czas mam być tą, która czeka. Tym razem wybieram siebie."
+    ],
+    [
+      "Aleks",
+      "Sandra, proszę. Nie rób mi tego."
+    ],
+    [
+      "Sandra",
+      "Ty też miałeś kiedyś wybór."
+    ],
+    [
+      "Aleks",
+      "Nie musimy tego kończyć w ten sposób."
+    ],
+    [
+      "Sandra",
+      "A jednak."
+    ],
+    [
+      "Aleks",
+      "Sandra? Gdzie jest ktokolwiek?"
+    ],
+    [
+      "Sandra",
+      "Aleks? …Nie. Przecież sama tego chciałam."
+    ],
+    [
+      "Dynia",
+      "Wolność to też cena. Miłej ciszy."
+    ]
+  ],
+  "e6aleks": [
+    [
+      "Dynia",
+      "Wystarczy, że jedno z was wyjdzie. Drugie zostaje."
+    ],
+    [
+      "Aleks",
+      "A czemu mamy ci wierzyć?"
+    ],
+    [
+      "Dynia",
+      "Nie musicie. Przecież i tak sobie nie wierzycie."
+    ],
+    [
+      "Sandra",
+      "To nie jest takie proste."
+    ],
+    [
+      "Dynia",
+      "Kto trzymał łopatę? A kto leżał pod ziemią?"
+    ],
+    [
+      "Aleks",
+      "Przepraszam. Nie dam rady jeszcze raz przez to przejść."
+    ],
+    [
+      "Sandra",
+      "Aha. Czyli teraz już nawet nie udajesz, że mnie uratujesz?"
+    ],
+    [
+      "Aleks",
+      "Ja… nie mam już siły."
+    ],
+    [
+      "Sandra",
+      "Idź. Ale nie mów potem, że zrobiłeś to dla mnie."
+    ],
+    [
+      "Aleks",
+      "Sandra? Gdzie jest ktokolwiek?"
+    ],
+    [
+      "Dynia",
+      "Wolność to też cena. Miłej ciszy."
+    ]
+  ],
+  "e6sandra": [
+    [
+      "Dynia",
+      "Wystarczy, że jedno z was wyjdzie. Drugie zostaje."
+    ],
+    [
+      "Aleks",
+      "A czemu mamy ci wierzyć?"
+    ],
+    [
+      "Dynia",
+      "Nie musicie. Przecież i tak sobie nie wierzycie."
+    ],
+    [
+      "Sandra",
+      "To nie jest takie proste."
+    ],
+    [
+      "Dynia",
+      "Kto trzymał łopatę? A kto leżał pod ziemią?"
+    ],
+    [
+      "Sandra",
+      "Cały czas mam być tą, która czeka. Tym razem wybieram siebie."
+    ],
+    [
+      "Aleks",
+      "Sandra, proszę. Nie rób mi tego."
+    ],
+    [
+      "Sandra",
+      "Ty też miałeś kiedyś wybór."
+    ],
+    [
+      "Aleks",
+      "Nie musimy tego kończyć w ten sposób."
+    ],
+    [
+      "Sandra",
+      "A jednak."
+    ],
+    [
+      "Sandra",
+      "Aleks? …Nie. Przecież sama tego chciałam."
+    ],
+    [
+      "Dynia",
+      "Wolność to też cena. Miłej ciszy."
+    ]
+  ],
+  "e7": [
+    [
+      "Sandra",
+      "Aleks. Teraz. Razem."
+    ],
+    [
+      "Aleks",
+      "Razem."
+    ],
+    [
+      "Dynia",
+      "Aleks! Sandra! Za póź… Nie. Nie! To tak nie miało działać!"
+    ],
+    [
+      "Lila",
+      "Nie tym razem."
+    ],
+    [
+      "Aleks",
+      "Sandro. Patrz."
+    ],
+    [
+      "Sandra",
+      "Słońce?"
+    ],
+    [
+      "Aleks",
+      "Pierwszy raz w tej grze wygląda legalnie."
+    ],
+    [
+      "Lila",
+      "Możemy iść?"
+    ],
+    [
+      "Sandra",
+      "Tym razem wszyscy."
+    ]
+  ]
+}

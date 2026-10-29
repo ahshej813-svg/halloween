@@ -1,0 +1,67 @@
+{
+  "native": [
+    {
+      "key": "w",
+      "dx": 0,
+      "dz": -0.6722800000000007
+    },
+    {
+      "key": "s",
+      "dx": 0,
+      "dz": 0.6610800000000037
+    },
+    {
+      "key": "a",
+      "dx": -0.6417599999999998,
+      "dz": 0
+    },
+    {
+      "key": "d",
+      "dx": 0.6997200000000002,
+      "dz": 0
+    },
+    {
+      "key": "ArrowUp",
+      "dx": 0,
+      "dz": -0.7389199999999985
+    },
+    {
+      "key": "ArrowDown",
+      "dx": 0,
+      "dz": 0.6999999999999966
+    },
+    {
+      "key": "ArrowLeft",
+      "dx": -0.7196,
+      "dz": 0
+    },
+    {
+      "key": "ArrowRight",
+      "dx": 0.680680000000001,
+      "dz": 0
+    }
+  ],
+  "normalized": {
+    "straight": 0.5599999999999934,
+    "diagonal": 0.559999999999995
+  },
+  "dialoguePause": true,
+  "blurClears": true,
+  "hiddenPause": true,
+  "separationLimit": true,
+  "fenceCollision": true,
+  "bothRequired": true,
+  "tableCollision": true,
+  "desktopSizes": [
+    [
+      1280,
+      800
+    ],
+    [
+      1920,
+      1080
+    ]
+  ],
+  "reset": true,
+  "errors": []
+}

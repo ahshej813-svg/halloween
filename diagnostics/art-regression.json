@@ -1,0 +1,48 @@
+{
+  "shots": [
+    {
+      "scene": "prologue",
+      "t": 18,
+      "backend": "gpu",
+      "pumpkin": 11478,
+      "road": 3008
+    },
+    {
+      "scene": "prologue",
+      "t": 18,
+      "backend": "cpu",
+      "pumpkin": 11489,
+      "road": 2989
+    },
+    {
+      "scene": "prologue",
+      "t": 28,
+      "backend": "gpu",
+      "pumpkin": 11917,
+      "road": 4050
+    },
+    {
+      "scene": "prologue",
+      "t": 28,
+      "backend": "cpu",
+      "pumpkin": 11916,
+      "road": 4023
+    },
+    {
+      "scene": "path",
+      "t": 35,
+      "backend": "gpu",
+      "pumpkin": 376,
+      "road": 4550
+    },
+    {
+      "scene": "path",
+      "t": 35,
+      "backend": "cpu",
+      "pumpkin": 365,
+      "road": 4473
+    }
+  ],
+  "errors": [],
+  "note": "Image-level visibility checks against the preserved CPU art path, not exact image equality. Approved curved ASCII glyph ramp restored separately and visually inspected."
+}

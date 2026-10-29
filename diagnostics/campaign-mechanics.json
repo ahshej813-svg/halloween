@@ -1,0 +1,56 @@
+{
+  "checks": [
+    "microphone denial keeps keyboard game available",
+    "attacks and co-op combo",
+    "independent dodges and cooldown",
+    "comic slaps do not deal damage",
+    "remapping, conflict rejection and disabling old binding",
+    "two-second partner revive",
+    "owner-only feeding and immutable artifact slots",
+    "animal effect chrupek",
+    "animal effect etf",
+    "7 regular attacks plus distinct grave attack for every grave (isolated high-HP scheduling fixtures)"
+  ],
+  "attacks": [
+    {
+      "selectedGrave": "gabrys",
+      "seen": [
+        "Rząd żółwi",
+        "Łapa gniewu",
+        "Krzyżowy promień",
+        "Pentagram",
+        "Szarpnięcie czasu",
+        "Deszcz dyni",
+        "Przemarsz klonów",
+        "Meimei Apokalipsa"
+      ]
+    },
+    {
+      "selectedGrave": "weronika",
+      "seen": [
+        "Rząd żółwi",
+        "Łapa gniewu",
+        "Krzyżowy promień",
+        "Pentagram",
+        "Szarpnięcie czasu",
+        "Deszcz dyni",
+        "Przemarsz klonów",
+        "Klątwa Wiedźmy"
+      ]
+    },
+    {
+      "selectedGrave": "boris",
+      "seen": [
+        "Rząd żółwi",
+        "Łapa gniewu",
+        "Krzyżowy promień",
+        "Pentagram",
+        "Szarpnięcie czasu",
+        "Deszcz dyni",
+        "Przemarsz klonów",
+        "Krypto Krach"
+      ]
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,26 @@
+{
+  "errors": [],
+  "reports": [
+    {
+      "route": "help",
+      "item": "take",
+      "victim": "self",
+      "target": "gabrys",
+      "act": {
+        "scene": "crow-ending",
+        "order": "help-first",
+        "houseVisited": true,
+        "tool": true,
+        "rescued": true,
+        "rescueAttempted": true,
+        "revived": true,
+        "ending": "crows",
+        "victim": "self",
+        "busy": false,
+        "pending": false,
+        "started": 92.60130000000169,
+        "dice": true
+      }
+    }
+  ]
+}

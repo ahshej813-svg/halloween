@@ -1,0 +1,39 @@
+{
+  "audio": {
+    "enabled": true,
+    "state": "running",
+    "speechActive": true,
+    "events": [
+      "Sandra:speech:Microsoft Paulina - Polish (Poland)",
+      "crow",
+      "Sandra:voice-start",
+      "Aleks:speech:Microsoft Adam - Polish (Poland)",
+      "Sandra:voice-skipped",
+      "Aleks:voice-start"
+    ]
+  },
+  "moving": {
+    "samples": 126,
+    "median": 34.69999999999982,
+    "p95": 48.600000000000364,
+    "gpu": true
+  },
+  "sixCharacters": {
+    "samples": 125,
+    "median": 34.70000000000073,
+    "p95": 48.600000000000364,
+    "gpu": true
+  },
+  "story": {
+    "visited": true,
+    "tool": false,
+    "rescued": false,
+    "victim": "sandra"
+  },
+  "fallback": {
+    "gpu": false,
+    "visible": 5535,
+    "z": -9.27391999999999
+  },
+  "errors": []
+}

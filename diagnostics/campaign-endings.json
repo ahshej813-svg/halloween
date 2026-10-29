@@ -1,0 +1,47 @@
+{
+  "reports": [
+    {
+      "ending": 1,
+      "passed": true,
+      "combatClock": 109.4020333333638
+    },
+    {
+      "ending": 3,
+      "passed": true,
+      "combatClock": 75.47409643294834
+    },
+    {
+      "ending": 4,
+      "passed": true,
+      "combatClock": 63.46666666667008
+    },
+    {
+      "ending": 5,
+      "passed": true,
+      "combatClock": 63.46836666664625
+    },
+    {
+      "ending": 6,
+      "passed": true,
+      "combatClock": 63.46666666667008
+    },
+    {
+      "ending": 7,
+      "passed": true,
+      "combatClock": 63.69366666665648
+    },
+    {
+      "ending": 2,
+      "passed": true,
+      "returnToAnimal": true
+    }
+  ],
+  "collision": {
+    "secret": 7,
+    "truce": 4,
+    "betrayal": 3,
+    "wrongMoment": null
+  },
+  "errors": [],
+  "note": "Late boss checkpoints with actual combat inputs; only campaign-e2e covers the full route."
+}

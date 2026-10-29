@@ -1,0 +1,49 @@
+{
+  "reports": [
+    {
+      "winA": false,
+      "winS": false,
+      "passed": true
+    },
+    {
+      "winA": false,
+      "winS": true,
+      "passed": true
+    },
+    {
+      "winA": true,
+      "winS": false,
+      "passed": true
+    },
+    {
+      "winA": true,
+      "winS": true,
+      "passed": true
+    },
+    {
+      "a": "fork",
+      "s": "pen",
+      "count": 4,
+      "passed": true
+    },
+    {
+      "a": "pen",
+      "s": "gouda",
+      "count": 2,
+      "passed": true
+    },
+    {
+      "a": "fork",
+      "s": "gouda",
+      "count": 1,
+      "passed": true
+    },
+    {
+      "a": "gouda",
+      "s": "fork",
+      "count": 1,
+      "passed": true
+    }
+  ],
+  "errors": []
+}

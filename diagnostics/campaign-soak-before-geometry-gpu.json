@@ -1,0 +1,1914 @@
+{
+  "minutes": 20,
+  "sourceHash": "ff5c683e55f706732c1605e345ea905fb7c8876cd651087d97128b68185b2f35",
+  "elapsedSeconds": 1200.466,
+  "samples": [
+    {
+      "seconds": 5,
+      "heap": 15042364,
+      "nodes": 822,
+      "mode": "zoo-ready",
+      "clock": 5.12170000000001,
+      "dom": 95
+    },
+    {
+      "seconds": 10,
+      "heap": 24526828,
+      "nodes": 490,
+      "mode": "zoo-ready",
+      "clock": 10.177200000000036,
+      "dom": 95
+    },
+    {
+      "seconds": 15,
+      "heap": 7892076,
+      "nodes": 285,
+      "mode": "zoo-ready",
+      "clock": 15.253700000000048,
+      "dom": 95
+    },
+    {
+      "seconds": 21,
+      "heap": 33201680,
+      "nodes": 902,
+      "mode": "zoo-ready",
+      "clock": 20.33000000000015,
+      "dom": 95
+    },
+    {
+      "seconds": 26,
+      "heap": 9218676,
+      "nodes": 271,
+      "mode": "zoo-ready",
+      "clock": 25.399500000000263,
+      "dom": 95
+    },
+    {
+      "seconds": 31,
+      "heap": 27128324,
+      "nodes": 287,
+      "mode": "zoo-ready",
+      "clock": 30.47590000000045,
+      "dom": 95
+    },
+    {
+      "seconds": 36,
+      "heap": 15031384,
+      "nodes": 239,
+      "mode": "zoo-ready",
+      "clock": 35.5314000000006,
+      "dom": 95
+    },
+    {
+      "seconds": 41,
+      "heap": 18070416,
+      "nodes": 533,
+      "mode": "zoo-ready",
+      "clock": 40.580000000000595,
+      "dom": 95
+    },
+    {
+      "seconds": 46,
+      "heap": 14681772,
+      "nodes": 326,
+      "mode": "zoo-ready",
+      "clock": 45.656400000000644,
+      "dom": 95
+    },
+    {
+      "seconds": 51,
+      "heap": 33393416,
+      "nodes": 424,
+      "mode": "zoo-ready",
+      "clock": 50.72590000000064,
+      "dom": 95
+    },
+    {
+      "seconds": 56,
+      "heap": 22592952,
+      "nodes": 673,
+      "mode": "zoo-ready",
+      "clock": 55.78850000000071,
+      "dom": 95
+    },
+    {
+      "seconds": 61,
+      "heap": 10450732,
+      "nodes": 451,
+      "mode": "zoo-ready",
+      "clock": 60.85100000000071,
+      "dom": 95
+    },
+    {
+      "seconds": 66,
+      "heap": 25675324,
+      "nodes": 276,
+      "mode": "boss",
+      "clock": 5.055600000000002,
+      "dom": 95
+    },
+    {
+      "seconds": 71,
+      "heap": 27601676,
+      "nodes": 538,
+      "mode": "boss",
+      "clock": 10.124999999999977,
+      "dom": 95
+    },
+    {
+      "seconds": 76,
+      "heap": 18539232,
+      "nodes": 268,
+      "mode": "boss",
+      "clock": 15.180499999999961,
+      "dom": 95
+    },
+    {
+      "seconds": 81,
+      "heap": 29038988,
+      "nodes": 444,
+      "mode": "boss",
+      "clock": 20.229200000000084,
+      "dom": 95
+    },
+    {
+      "seconds": 86,
+      "heap": 13783920,
+      "nodes": 303,
+      "mode": "boss",
+      "clock": 25.017400000000123,
+      "dom": 95
+    },
+    {
+      "seconds": 91,
+      "heap": 16080120,
+      "nodes": 303,
+      "mode": "boss",
+      "clock": 25.017400000000123,
+      "dom": 95
+    },
+    {
+      "seconds": 96,
+      "heap": 37940560,
+      "nodes": 171,
+      "mode": "boss",
+      "clock": 25.017400000000123,
+      "dom": 95
+    },
+    {
+      "seconds": 101,
+      "heap": 25385108,
+      "nodes": 171,
+      "mode": "boss",
+      "clock": 25.017400000000123,
+      "dom": 95
+    },
+    {
+      "seconds": 107,
+      "heap": 33913404,
+      "nodes": 171,
+      "mode": "boss",
+      "clock": 25.017400000000123,
+      "dom": 95
+    },
+    {
+      "seconds": 112,
+      "heap": 32044932,
+      "nodes": 171,
+      "mode": "boss",
+      "clock": 25.017400000000123,
+      "dom": 95
+    },
+    {
+      "seconds": 117,
+      "heap": 34672012,
+      "nodes": 171,
+      "mode": "boss",
+      "clock": 25.017400000000123,
+      "dom": 95
+    },
+    {
+      "seconds": 122,
+      "heap": 21070164,
+      "nodes": 171,
+      "mode": "boss",
+      "clock": 25.017400000000123,
+      "dom": 95
+    },
+    {
+      "seconds": 127,
+      "heap": 28432532,
+      "nodes": 582,
+      "mode": "trance",
+      "clock": 5.034900000000012,
+      "dom": 95
+    },
+    {
+      "seconds": 132,
+      "heap": 39211484,
+      "nodes": 305,
+      "mode": "trance",
+      "clock": 10.090399999999985,
+      "dom": 95
+    },
+    {
+      "seconds": 137,
+      "heap": 19746136,
+      "nodes": 662,
+      "mode": "trance",
+      "clock": 15.125099999999987,
+      "dom": 95
+    },
+    {
+      "seconds": 142,
+      "heap": 23597816,
+      "nodes": 432,
+      "mode": "trance",
+      "clock": 20.187700000000063,
+      "dom": 95
+    },
+    {
+      "seconds": 147,
+      "heap": 32288080,
+      "nodes": 667,
+      "mode": "trance",
+      "clock": 25.20840000000015,
+      "dom": 95
+    },
+    {
+      "seconds": 152,
+      "heap": 32275984,
+      "nodes": 501,
+      "mode": "trance",
+      "clock": 30.27790000000023,
+      "dom": 95
+    },
+    {
+      "seconds": 157,
+      "heap": 41508124,
+      "nodes": 1189,
+      "mode": "trance",
+      "clock": 35.30560000000057,
+      "dom": 95
+    },
+    {
+      "seconds": 162,
+      "heap": 16960796,
+      "nodes": 739,
+      "mode": "trance",
+      "clock": 40.368200000000606,
+      "dom": 95
+    },
+    {
+      "seconds": 167,
+      "heap": 14249024,
+      "nodes": 234,
+      "mode": "trance",
+      "clock": 45.430700000000854,
+      "dom": 95
+    },
+    {
+      "seconds": 172,
+      "heap": 38443056,
+      "nodes": 582,
+      "mode": "trance",
+      "clock": 50.47240000000092,
+      "dom": 95
+    },
+    {
+      "seconds": 177,
+      "heap": 18906716,
+      "nodes": 647,
+      "mode": "trance",
+      "clock": 55.54200000000099,
+      "dom": 95
+    },
+    {
+      "seconds": 182,
+      "heap": 28262784,
+      "nodes": 327,
+      "mode": "trance",
+      "clock": 60.56960000000078,
+      "dom": 95
+    },
+    {
+      "seconds": 187,
+      "heap": 19101164,
+      "nodes": 171,
+      "mode": "ending-talk",
+      "clock": 3.0034999999999936,
+      "dom": 95
+    },
+    {
+      "seconds": 192,
+      "heap": 20966272,
+      "nodes": 171,
+      "mode": "ending-talk",
+      "clock": 3.0034999999999936,
+      "dom": 95
+    },
+    {
+      "seconds": 197,
+      "heap": 7074628,
+      "nodes": 171,
+      "mode": "ending-talk",
+      "clock": 3.0034999999999936,
+      "dom": 95
+    },
+    {
+      "seconds": 202,
+      "heap": 8865204,
+      "nodes": 171,
+      "mode": "ending-talk",
+      "clock": 3.0034999999999936,
+      "dom": 95
+    },
+    {
+      "seconds": 207,
+      "heap": 10691120,
+      "nodes": 171,
+      "mode": "ending-talk",
+      "clock": 3.0034999999999936,
+      "dom": 95
+    },
+    {
+      "seconds": 212,
+      "heap": 22339984,
+      "nodes": 171,
+      "mode": "ending-talk",
+      "clock": 3.0034999999999936,
+      "dom": 95
+    },
+    {
+      "seconds": 217,
+      "heap": 23812696,
+      "nodes": 171,
+      "mode": "ending-talk",
+      "clock": 3.0034999999999936,
+      "dom": 95
+    },
+    {
+      "seconds": 222,
+      "heap": 8655956,
+      "nodes": 171,
+      "mode": "ending-talk",
+      "clock": 3.0034999999999936,
+      "dom": 95
+    },
+    {
+      "seconds": 227,
+      "heap": 10357788,
+      "nodes": 171,
+      "mode": "ending-talk",
+      "clock": 3.0034999999999936,
+      "dom": 95
+    },
+    {
+      "seconds": 232,
+      "heap": 23186172,
+      "nodes": 171,
+      "mode": "ending-talk",
+      "clock": 3.0034999999999936,
+      "dom": 95
+    },
+    {
+      "seconds": 237,
+      "heap": 24857040,
+      "nodes": 171,
+      "mode": "ending-talk",
+      "clock": 3.0034999999999936,
+      "dom": 95
+    },
+    {
+      "seconds": 243,
+      "heap": 27417900,
+      "nodes": 171,
+      "mode": "ending-talk",
+      "clock": 3.0034999999999936,
+      "dom": 95
+    },
+    {
+      "seconds": 248,
+      "heap": 17399180,
+      "nodes": 559,
+      "mode": "training",
+      "clock": 5.125000000000002,
+      "dom": 95
+    },
+    {
+      "seconds": 253,
+      "heap": 15306164,
+      "nodes": 205,
+      "mode": "training",
+      "clock": 10.145800000000014,
+      "dom": 95
+    },
+    {
+      "seconds": 258,
+      "heap": 24574560,
+      "nodes": 527,
+      "mode": "training",
+      "clock": 15.159599999999992,
+      "dom": 95
+    },
+    {
+      "seconds": 263,
+      "heap": 17145260,
+      "nodes": 211,
+      "mode": "training",
+      "clock": 20.187500000000355,
+      "dom": 95
+    },
+    {
+      "seconds": 268,
+      "heap": 11049548,
+      "nodes": 563,
+      "mode": "training",
+      "clock": 25.229300000000816,
+      "dom": 95
+    },
+    {
+      "seconds": 273,
+      "heap": 32668900,
+      "nodes": 249,
+      "mode": "training",
+      "clock": 30.250000000001265,
+      "dom": 95
+    },
+    {
+      "seconds": 278,
+      "heap": 14887580,
+      "nodes": 572,
+      "mode": "training",
+      "clock": 35.27080000000118,
+      "dom": 95
+    },
+    {
+      "seconds": 283,
+      "heap": 11504680,
+      "nodes": 265,
+      "mode": "training",
+      "clock": 40.30550000000084,
+      "dom": 95
+    },
+    {
+      "seconds": 288,
+      "heap": 13393932,
+      "nodes": 587,
+      "mode": "training",
+      "clock": 45.31950000000047,
+      "dom": 95
+    },
+    {
+      "seconds": 293,
+      "heap": 15255272,
+      "nodes": 320,
+      "mode": "training",
+      "clock": 50.347200000000115,
+      "dom": 95
+    },
+    {
+      "seconds": 298,
+      "heap": 16948920,
+      "nodes": 635,
+      "mode": "training",
+      "clock": 55.35419999999982,
+      "dom": 95
+    },
+    {
+      "seconds": 303,
+      "heap": 25974840,
+      "nodes": 350,
+      "mode": "training",
+      "clock": 60.37499999999962,
+      "dom": 95
+    },
+    {
+      "seconds": 308,
+      "heap": 9875548,
+      "nodes": 252,
+      "mode": "market",
+      "clock": 5.04170000000001,
+      "dom": 100
+    },
+    {
+      "seconds": 313,
+      "heap": 13170132,
+      "nodes": 214,
+      "mode": "market",
+      "clock": 10.048599999999848,
+      "dom": 100
+    },
+    {
+      "seconds": 318,
+      "heap": 15578156,
+      "nodes": 252,
+      "mode": "market",
+      "clock": 15.083399999999564,
+      "dom": 100
+    },
+    {
+      "seconds": 323,
+      "heap": 20339212,
+      "nodes": 214,
+      "mode": "market",
+      "clock": 20.11119999999992,
+      "dom": 100
+    },
+    {
+      "seconds": 328,
+      "heap": 14318852,
+      "nodes": 252,
+      "mode": "market",
+      "clock": 25.125100000000394,
+      "dom": 100
+    },
+    {
+      "seconds": 333,
+      "heap": 12828488,
+      "nodes": 200,
+      "mode": "market",
+      "clock": 30.138900000000852,
+      "dom": 100
+    },
+    {
+      "seconds": 338,
+      "heap": 7110232,
+      "nodes": 228,
+      "mode": "market",
+      "clock": 35.16670000000083,
+      "dom": 100
+    },
+    {
+      "seconds": 343,
+      "heap": 13172148,
+      "nodes": 200,
+      "mode": "market",
+      "clock": 40.18070000000051,
+      "dom": 100
+    },
+    {
+      "seconds": 348,
+      "heap": 8361676,
+      "nodes": 228,
+      "mode": "market",
+      "clock": 45.20140000000022,
+      "dom": 100
+    },
+    {
+      "seconds": 353,
+      "heap": 14809372,
+      "nodes": 200,
+      "mode": "market",
+      "clock": 50.22239999999989,
+      "dom": 100
+    },
+    {
+      "seconds": 358,
+      "heap": 10697932,
+      "nodes": 228,
+      "mode": "market",
+      "clock": 55.25009999999973,
+      "dom": 100
+    },
+    {
+      "seconds": 363,
+      "heap": 23482892,
+      "nodes": 228,
+      "mode": "market",
+      "clock": 60.284899999999475,
+      "dom": 100
+    },
+    {
+      "seconds": 368,
+      "heap": 17868452,
+      "nodes": 450,
+      "mode": "zoo-ready",
+      "clock": 5.055800000011931,
+      "dom": 100
+    },
+    {
+      "seconds": 373,
+      "heap": 10719108,
+      "nodes": 494,
+      "mode": "zoo-ready",
+      "clock": 10.13220000001195,
+      "dom": 100
+    },
+    {
+      "seconds": 379,
+      "heap": 23013120,
+      "nodes": 374,
+      "mode": "zoo-ready",
+      "clock": 15.201700000011845,
+      "dom": 100
+    },
+    {
+      "seconds": 384,
+      "heap": 12831752,
+      "nodes": 628,
+      "mode": "zoo-ready",
+      "clock": 20.264200000011694,
+      "dom": 100
+    },
+    {
+      "seconds": 389,
+      "heap": 26789088,
+      "nodes": 772,
+      "mode": "zoo-ready",
+      "clock": 25.333700000011476,
+      "dom": 100
+    },
+    {
+      "seconds": 394,
+      "heap": 14095428,
+      "nodes": 336,
+      "mode": "zoo-ready",
+      "clock": 30.389200000011318,
+      "dom": 100
+    },
+    {
+      "seconds": 399,
+      "heap": 12985852,
+      "nodes": 944,
+      "mode": "zoo-ready",
+      "clock": 35.45870000001121,
+      "dom": 100
+    },
+    {
+      "seconds": 404,
+      "heap": 20505984,
+      "nodes": 477,
+      "mode": "zoo-ready",
+      "clock": 40.52120000001108,
+      "dom": 100
+    },
+    {
+      "seconds": 409,
+      "heap": 22569092,
+      "nodes": 716,
+      "mode": "zoo-ready",
+      "clock": 45.576800000011126,
+      "dom": 100
+    },
+    {
+      "seconds": 414,
+      "heap": 24884176,
+      "nodes": 437,
+      "mode": "zoo-ready",
+      "clock": 50.63240000001103,
+      "dom": 100
+    },
+    {
+      "seconds": 419,
+      "heap": 36027236,
+      "nodes": 326,
+      "mode": "zoo-ready",
+      "clock": 55.68080000001095,
+      "dom": 100
+    },
+    {
+      "seconds": 424,
+      "heap": 34737864,
+      "nodes": 449,
+      "mode": "zoo-ready",
+      "clock": 60.743500000010904,
+      "dom": 100
+    },
+    {
+      "seconds": 429,
+      "heap": 34903708,
+      "nodes": 494,
+      "mode": "boss",
+      "clock": 5.041800000000035,
+      "dom": 100
+    },
+    {
+      "seconds": 434,
+      "heap": 10613752,
+      "nodes": 553,
+      "mode": "boss",
+      "clock": 10.111199999999979,
+      "dom": 100
+    },
+    {
+      "seconds": 439,
+      "heap": 21703476,
+      "nodes": 287,
+      "mode": "boss",
+      "clock": 15.15979999999989,
+      "dom": 100
+    },
+    {
+      "seconds": 444,
+      "heap": 9189220,
+      "nodes": 356,
+      "mode": "boss",
+      "clock": 20.18769999999991,
+      "dom": 100
+    },
+    {
+      "seconds": 449,
+      "heap": 26562600,
+      "nodes": 333,
+      "mode": "boss",
+      "clock": 25.014099999999978,
+      "dom": 100
+    },
+    {
+      "seconds": 454,
+      "heap": 29732432,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.014099999999978,
+      "dom": 100
+    },
+    {
+      "seconds": 459,
+      "heap": 10763848,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.014099999999978,
+      "dom": 100
+    },
+    {
+      "seconds": 464,
+      "heap": 16803012,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.014099999999978,
+      "dom": 100
+    },
+    {
+      "seconds": 469,
+      "heap": 11966472,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.014099999999978,
+      "dom": 100
+    },
+    {
+      "seconds": 475,
+      "heap": 19449452,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.014099999999978,
+      "dom": 100
+    },
+    {
+      "seconds": 480,
+      "heap": 11628464,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.014099999999978,
+      "dom": 100
+    },
+    {
+      "seconds": 485,
+      "heap": 8154216,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.014099999999978,
+      "dom": 100
+    },
+    {
+      "seconds": 490,
+      "heap": 25560452,
+      "nodes": 694,
+      "mode": "trance",
+      "clock": 5.048500000000043,
+      "dom": 100
+    },
+    {
+      "seconds": 495,
+      "heap": 24415268,
+      "nodes": 687,
+      "mode": "trance",
+      "clock": 10.111000000000049,
+      "dom": 100
+    },
+    {
+      "seconds": 500,
+      "heap": 23692368,
+      "nodes": 527,
+      "mode": "trance",
+      "clock": 15.152699999999818,
+      "dom": 100
+    },
+    {
+      "seconds": 505,
+      "heap": 21302676,
+      "nodes": 224,
+      "mode": "trance",
+      "clock": 20.201299999999783,
+      "dom": 100
+    },
+    {
+      "seconds": 510,
+      "heap": 34236484,
+      "nodes": 356,
+      "mode": "trance",
+      "clock": 25.2290999999998,
+      "dom": 100
+    },
+    {
+      "seconds": 515,
+      "heap": 30618328,
+      "nodes": 524,
+      "mode": "trance",
+      "clock": 30.284799999999827,
+      "dom": 100
+    },
+    {
+      "seconds": 520,
+      "heap": 19214024,
+      "nodes": 641,
+      "mode": "trance",
+      "clock": 35.319399999999945,
+      "dom": 100
+    },
+    {
+      "seconds": 525,
+      "heap": 15603496,
+      "nodes": 304,
+      "mode": "trance",
+      "clock": 40.375099999999875,
+      "dom": 100
+    },
+    {
+      "seconds": 530,
+      "heap": 26936916,
+      "nodes": 416,
+      "mode": "trance",
+      "clock": 45.4374999999998,
+      "dom": 100
+    },
+    {
+      "seconds": 535,
+      "heap": 25153472,
+      "nodes": 790,
+      "mode": "trance",
+      "clock": 50.48619999999951,
+      "dom": 100
+    },
+    {
+      "seconds": 540,
+      "heap": 10083868,
+      "nodes": 354,
+      "mode": "trance",
+      "clock": 55.55549999999947,
+      "dom": 100
+    },
+    {
+      "seconds": 545,
+      "heap": 18448996,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0002000000000684,
+      "dom": 100
+    },
+    {
+      "seconds": 550,
+      "heap": 20615012,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0002000000000684,
+      "dom": 100
+    },
+    {
+      "seconds": 555,
+      "heap": 6378304,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0002000000000684,
+      "dom": 100
+    },
+    {
+      "seconds": 560,
+      "heap": 8527812,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0002000000000684,
+      "dom": 100
+    },
+    {
+      "seconds": 565,
+      "heap": 11228028,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0002000000000684,
+      "dom": 100
+    },
+    {
+      "seconds": 570,
+      "heap": 24765636,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0002000000000684,
+      "dom": 100
+    },
+    {
+      "seconds": 575,
+      "heap": 28087332,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0002000000000684,
+      "dom": 100
+    },
+    {
+      "seconds": 580,
+      "heap": 6362568,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0002000000000684,
+      "dom": 100
+    },
+    {
+      "seconds": 585,
+      "heap": 10046828,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0002000000000684,
+      "dom": 100
+    },
+    {
+      "seconds": 590,
+      "heap": 19640544,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0002000000000684,
+      "dom": 100
+    },
+    {
+      "seconds": 595,
+      "heap": 22961292,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0002000000000684,
+      "dom": 100
+    },
+    {
+      "seconds": 600,
+      "heap": 6276608,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0002000000000684,
+      "dom": 100
+    },
+    {
+      "seconds": 605,
+      "heap": 25195684,
+      "nodes": 700,
+      "mode": "training",
+      "clock": 5.01599999997611,
+      "dom": 100
+    },
+    {
+      "seconds": 610,
+      "heap": 31178764,
+      "nodes": 247,
+      "mode": "training",
+      "clock": 10.043899999976055,
+      "dom": 100
+    },
+    {
+      "seconds": 616,
+      "heap": 24808032,
+      "nodes": 510,
+      "mode": "training",
+      "clock": 15.064699999975996,
+      "dom": 100
+    },
+    {
+      "seconds": 621,
+      "heap": 24535712,
+      "nodes": 657,
+      "mode": "training",
+      "clock": 20.092399999976042,
+      "dom": 100
+    },
+    {
+      "seconds": 626,
+      "heap": 13732308,
+      "nodes": 378,
+      "mode": "training",
+      "clock": 25.134199999976417,
+      "dom": 100
+    },
+    {
+      "seconds": 631,
+      "heap": 22343892,
+      "nodes": 686,
+      "mode": "training",
+      "clock": 30.1618999999767,
+      "dom": 100
+    },
+    {
+      "seconds": 636,
+      "heap": 18302512,
+      "nodes": 400,
+      "mode": "training",
+      "clock": 35.189699999976575,
+      "dom": 100
+    },
+    {
+      "seconds": 641,
+      "heap": 28797228,
+      "nodes": 718,
+      "mode": "training",
+      "clock": 40.210599999976054,
+      "dom": 100
+    },
+    {
+      "seconds": 646,
+      "heap": 28423028,
+      "nodes": 357,
+      "mode": "training",
+      "clock": 45.23829999997578,
+      "dom": 100
+    },
+    {
+      "seconds": 651,
+      "heap": 27988556,
+      "nodes": 692,
+      "mode": "training",
+      "clock": 50.259199999975344,
+      "dom": 100
+    },
+    {
+      "seconds": 656,
+      "heap": 9719272,
+      "nodes": 397,
+      "mode": "training",
+      "clock": 55.27309999997483,
+      "dom": 100
+    },
+    {
+      "seconds": 661,
+      "heap": 9538560,
+      "nodes": 713,
+      "mode": "training",
+      "clock": 60.293899999974386,
+      "dom": 100
+    },
+    {
+      "seconds": 666,
+      "heap": 24899488,
+      "nodes": 266,
+      "mode": "market",
+      "clock": 5.027899999999998,
+      "dom": 100
+    },
+    {
+      "seconds": 671,
+      "heap": 23954376,
+      "nodes": 228,
+      "mode": "market",
+      "clock": 10.04159999999982,
+      "dom": 100
+    },
+    {
+      "seconds": 676,
+      "heap": 27579524,
+      "nodes": 266,
+      "mode": "market",
+      "clock": 15.062599999999696,
+      "dom": 100
+    },
+    {
+      "seconds": 681,
+      "heap": 31440140,
+      "nodes": 252,
+      "mode": "market",
+      "clock": 20.07649999999988,
+      "dom": 100
+    },
+    {
+      "seconds": 686,
+      "heap": 26581020,
+      "nodes": 200,
+      "mode": "market",
+      "clock": 25.111200000000096,
+      "dom": 100
+    },
+    {
+      "seconds": 691,
+      "heap": 14153416,
+      "nodes": 252,
+      "mode": "market",
+      "clock": 30.1528000000002,
+      "dom": 100
+    },
+    {
+      "seconds": 696,
+      "heap": 27296948,
+      "nodes": 266,
+      "mode": "market",
+      "clock": 35.18060000000014,
+      "dom": 100
+    },
+    {
+      "seconds": 701,
+      "heap": 29984348,
+      "nodes": 214,
+      "mode": "market",
+      "clock": 40.21539999999986,
+      "dom": 100
+    },
+    {
+      "seconds": 706,
+      "heap": 8827052,
+      "nodes": 176,
+      "mode": "market",
+      "clock": 45.23619999999942,
+      "dom": 100
+    },
+    {
+      "seconds": 711,
+      "heap": 22581204,
+      "nodes": 266,
+      "mode": "market",
+      "clock": 50.25709999999897,
+      "dom": 100
+    },
+    {
+      "seconds": 716,
+      "heap": 26378852,
+      "nodes": 228,
+      "mode": "market",
+      "clock": 55.2709999999986,
+      "dom": 100
+    },
+    {
+      "seconds": 721,
+      "heap": 26821392,
+      "nodes": 176,
+      "mode": "market",
+      "clock": 60.29179999999812,
+      "dom": 100
+    },
+    {
+      "seconds": 726,
+      "heap": 30829436,
+      "nodes": 864,
+      "mode": "zoo-ready",
+      "clock": 5.006999999999991,
+      "dom": 100
+    },
+    {
+      "seconds": 731,
+      "heap": 20272960,
+      "nodes": 525,
+      "mode": "zoo-ready",
+      "clock": 10.076400000000007,
+      "dom": 100
+    },
+    {
+      "seconds": 736,
+      "heap": 8501808,
+      "nodes": 213,
+      "mode": "zoo-ready",
+      "clock": 15.131999999999959,
+      "dom": 100
+    },
+    {
+      "seconds": 741,
+      "heap": 11222984,
+      "nodes": 429,
+      "mode": "zoo-ready",
+      "clock": 20.201499999999957,
+      "dom": 100
+    },
+    {
+      "seconds": 746,
+      "heap": 26928608,
+      "nodes": 545,
+      "mode": "zoo-ready",
+      "clock": 25.250099999999946,
+      "dom": 100
+    },
+    {
+      "seconds": 751,
+      "heap": 17211740,
+      "nodes": 561,
+      "mode": "zoo-ready",
+      "clock": 30.326500000000028,
+      "dom": 100
+    },
+    {
+      "seconds": 757,
+      "heap": 21868992,
+      "nodes": 690,
+      "mode": "zoo-ready",
+      "clock": 35.4098999999999,
+      "dom": 100
+    },
+    {
+      "seconds": 762,
+      "heap": 29370740,
+      "nodes": 440,
+      "mode": "zoo-ready",
+      "clock": 40.47919999999955,
+      "dom": 100
+    },
+    {
+      "seconds": 767,
+      "heap": 15587028,
+      "nodes": 634,
+      "mode": "zoo-ready",
+      "clock": 45.54869999999924,
+      "dom": 100
+    },
+    {
+      "seconds": 772,
+      "heap": 24662968,
+      "nodes": 502,
+      "mode": "zoo-ready",
+      "clock": 50.59739999999905,
+      "dom": 100
+    },
+    {
+      "seconds": 777,
+      "heap": 16089788,
+      "nodes": 518,
+      "mode": "zoo-ready",
+      "clock": 55.66679999999869,
+      "dom": 100
+    },
+    {
+      "seconds": 782,
+      "heap": 10878644,
+      "nodes": 455,
+      "mode": "zoo-ready",
+      "clock": 60.73619999999847,
+      "dom": 100
+    },
+    {
+      "seconds": 787,
+      "heap": 24178256,
+      "nodes": 533,
+      "mode": "boss",
+      "clock": 5.020900000000019,
+      "dom": 100
+    },
+    {
+      "seconds": 792,
+      "heap": 20533956,
+      "nodes": 213,
+      "mode": "boss",
+      "clock": 10.090300000000058,
+      "dom": 100
+    },
+    {
+      "seconds": 797,
+      "heap": 12502320,
+      "nodes": 268,
+      "mode": "boss",
+      "clock": 15.1389999999999,
+      "dom": 100
+    },
+    {
+      "seconds": 802,
+      "heap": 38276300,
+      "nodes": 397,
+      "mode": "boss",
+      "clock": 20.173700000000036,
+      "dom": 100
+    },
+    {
+      "seconds": 807,
+      "heap": 11449568,
+      "nodes": 513,
+      "mode": "boss",
+      "clock": 25.027900000000102,
+      "dom": 100
+    },
+    {
+      "seconds": 812,
+      "heap": 29585916,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.027900000000102,
+      "dom": 100
+    },
+    {
+      "seconds": 817,
+      "heap": 18115112,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.027900000000102,
+      "dom": 100
+    },
+    {
+      "seconds": 822,
+      "heap": 17071272,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.027900000000102,
+      "dom": 100
+    },
+    {
+      "seconds": 827,
+      "heap": 30282404,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.027900000000102,
+      "dom": 100
+    },
+    {
+      "seconds": 832,
+      "heap": 39077028,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.027900000000102,
+      "dom": 100
+    },
+    {
+      "seconds": 837,
+      "heap": 11055648,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.027900000000102,
+      "dom": 100
+    },
+    {
+      "seconds": 842,
+      "heap": 14187428,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.027900000000102,
+      "dom": 100
+    },
+    {
+      "seconds": 847,
+      "heap": 12833736,
+      "nodes": 602,
+      "mode": "trance",
+      "clock": 5.020900000000056,
+      "dom": 100
+    },
+    {
+      "seconds": 852,
+      "heap": 34799964,
+      "nodes": 671,
+      "mode": "trance",
+      "clock": 10.111100000000018,
+      "dom": 100
+    },
+    {
+      "seconds": 857,
+      "heap": 35442448,
+      "nodes": 553,
+      "mode": "trance",
+      "clock": 15.11809999999994,
+      "dom": 100
+    },
+    {
+      "seconds": 863,
+      "heap": 24063796,
+      "nodes": 228,
+      "mode": "trance",
+      "clock": 20.173599999999936,
+      "dom": 100
+    },
+    {
+      "seconds": 868,
+      "heap": 28599776,
+      "nodes": 418,
+      "mode": "trance",
+      "clock": 25.194500000000055,
+      "dom": 100
+    },
+    {
+      "seconds": 873,
+      "heap": 11679320,
+      "nodes": 616,
+      "mode": "trance",
+      "clock": 30.263900000000127,
+      "dom": 100
+    },
+    {
+      "seconds": 878,
+      "heap": 13819052,
+      "nodes": 235,
+      "mode": "trance",
+      "clock": 35.29870000000009,
+      "dom": 100
+    },
+    {
+      "seconds": 883,
+      "heap": 28206640,
+      "nodes": 550,
+      "mode": "trance",
+      "clock": 40.368099999999856,
+      "dom": 100
+    },
+    {
+      "seconds": 888,
+      "heap": 31096020,
+      "nodes": 679,
+      "mode": "trance",
+      "clock": 45.43059999999987,
+      "dom": 100
+    },
+    {
+      "seconds": 893,
+      "heap": 24580820,
+      "nodes": 461,
+      "mode": "trance",
+      "clock": 50.49319999999976,
+      "dom": 100
+    },
+    {
+      "seconds": 898,
+      "heap": 29479664,
+      "nodes": 500,
+      "mode": "trance",
+      "clock": 55.56959999999951,
+      "dom": 100
+    },
+    {
+      "seconds": 903,
+      "heap": 33063876,
+      "nodes": 304,
+      "mode": "trance",
+      "clock": 60.59039999999935,
+      "dom": 100
+    },
+    {
+      "seconds": 908,
+      "heap": 31382892,
+      "nodes": 261,
+      "mode": "ending-talk",
+      "clock": 3.0035499999999864,
+      "dom": 100
+    },
+    {
+      "seconds": 913,
+      "heap": 7225696,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0035499999999864,
+      "dom": 100
+    },
+    {
+      "seconds": 918,
+      "heap": 10177528,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0035499999999864,
+      "dom": 100
+    },
+    {
+      "seconds": 923,
+      "heap": 13015892,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0035499999999864,
+      "dom": 100
+    },
+    {
+      "seconds": 928,
+      "heap": 16335116,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0035499999999864,
+      "dom": 100
+    },
+    {
+      "seconds": 933,
+      "heap": 21135660,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0035499999999864,
+      "dom": 100
+    },
+    {
+      "seconds": 938,
+      "heap": 24428768,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0035499999999864,
+      "dom": 100
+    },
+    {
+      "seconds": 943,
+      "heap": 29102196,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0035499999999864,
+      "dom": 100
+    },
+    {
+      "seconds": 948,
+      "heap": 32402264,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0035499999999864,
+      "dom": 100
+    },
+    {
+      "seconds": 953,
+      "heap": 10838348,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0035499999999864,
+      "dom": 100
+    },
+    {
+      "seconds": 958,
+      "heap": 14123900,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0035499999999864,
+      "dom": 100
+    },
+    {
+      "seconds": 963,
+      "heap": 17073708,
+      "nodes": 181,
+      "mode": "ending-talk",
+      "clock": 3.0035499999999864,
+      "dom": 100
+    },
+    {
+      "seconds": 968,
+      "heap": 17728612,
+      "nodes": 403,
+      "mode": "training",
+      "clock": 5.013999999999973,
+      "dom": 100
+    },
+    {
+      "seconds": 973,
+      "heap": 23237892,
+      "nodes": 695,
+      "mode": "training",
+      "clock": 10.027699999999871,
+      "dom": 100
+    },
+    {
+      "seconds": 978,
+      "heap": 10742936,
+      "nodes": 387,
+      "mode": "training",
+      "clock": 15.076399999999692,
+      "dom": 100
+    },
+    {
+      "seconds": 983,
+      "heap": 15334344,
+      "nodes": 666,
+      "mode": "training",
+      "clock": 20.097199999999976,
+      "dom": 100
+    },
+    {
+      "seconds": 988,
+      "heap": 31967636,
+      "nodes": 354,
+      "mode": "training",
+      "clock": 25.125000000000195,
+      "dom": 100
+    },
+    {
+      "seconds": 993,
+      "heap": 15522496,
+      "nodes": 664,
+      "mode": "training",
+      "clock": 30.152900000000546,
+      "dom": 100
+    },
+    {
+      "seconds": 998,
+      "heap": 8664156,
+      "nodes": 276,
+      "mode": "training",
+      "clock": 35.180600000000645,
+      "dom": 100
+    },
+    {
+      "seconds": 1003,
+      "heap": 20299368,
+      "nodes": 571,
+      "mode": "training",
+      "clock": 40.25700000000016,
+      "dom": 100
+    },
+    {
+      "seconds": 1008,
+      "heap": 31717056,
+      "nodes": 267,
+      "mode": "training",
+      "clock": 45.27089999999977,
+      "dom": 100
+    },
+    {
+      "seconds": 1014,
+      "heap": 28289304,
+      "nodes": 558,
+      "mode": "training",
+      "clock": 50.30559999999942,
+      "dom": 100
+    },
+    {
+      "seconds": 1019,
+      "heap": 28790984,
+      "nodes": 237,
+      "mode": "training",
+      "clock": 55.33339999999891,
+      "dom": 100
+    },
+    {
+      "seconds": 1024,
+      "heap": 27670396,
+      "nodes": 582,
+      "mode": "training",
+      "clock": 60.37509999999851,
+      "dom": 100
+    },
+    {
+      "seconds": 1029,
+      "heap": 14396592,
+      "nodes": 266,
+      "mode": "market",
+      "clock": 5.006999999999984,
+      "dom": 100
+    },
+    {
+      "seconds": 1034,
+      "heap": 26181556,
+      "nodes": 304,
+      "mode": "market",
+      "clock": 10.034800000000018,
+      "dom": 100
+    },
+    {
+      "seconds": 1039,
+      "heap": 28835608,
+      "nodes": 280,
+      "mode": "market",
+      "clock": 15.090399999999864,
+      "dom": 100
+    },
+    {
+      "seconds": 1044,
+      "heap": 16622904,
+      "nodes": 304,
+      "mode": "market",
+      "clock": 20.132000000000055,
+      "dom": 100
+    },
+    {
+      "seconds": 1049,
+      "heap": 7259392,
+      "nodes": 266,
+      "mode": "market",
+      "clock": 25.173600000000278,
+      "dom": 100
+    },
+    {
+      "seconds": 1054,
+      "heap": 15125940,
+      "nodes": 280,
+      "mode": "market",
+      "clock": 30.215400000000493,
+      "dom": 100
+    },
+    {
+      "seconds": 1059,
+      "heap": 27483044,
+      "nodes": 408,
+      "mode": "market",
+      "clock": 35.22930000000042,
+      "dom": 100
+    },
+    {
+      "seconds": 1064,
+      "heap": 8426404,
+      "nodes": 214,
+      "mode": "market",
+      "clock": 40.29180000000038,
+      "dom": 100
+    },
+    {
+      "seconds": 1069,
+      "heap": 8888016,
+      "nodes": 176,
+      "mode": "market",
+      "clock": 45.33350000000017,
+      "dom": 100
+    },
+    {
+      "seconds": 1074,
+      "heap": 32475040,
+      "nodes": 228,
+      "mode": "market",
+      "clock": 50.3333999999996,
+      "dom": 100
+    },
+    {
+      "seconds": 1079,
+      "heap": 25227744,
+      "nodes": 266,
+      "mode": "market",
+      "clock": 55.34729999999911,
+      "dom": 100
+    },
+    {
+      "seconds": 1084,
+      "heap": 24779876,
+      "nodes": 214,
+      "mode": "market",
+      "clock": 60.38209999999872,
+      "dom": 100
+    },
+    {
+      "seconds": 1089,
+      "heap": 26833844,
+      "nodes": 285,
+      "mode": "zoo-ready",
+      "clock": 4.99619999999995,
+      "dom": 100
+    },
+    {
+      "seconds": 1094,
+      "heap": 29549848,
+      "nodes": 321,
+      "mode": "zoo-ready",
+      "clock": 10.06560000000009,
+      "dom": 100
+    },
+    {
+      "seconds": 1099,
+      "heap": 11164760,
+      "nodes": 224,
+      "mode": "zoo-ready",
+      "clock": 15.121199999999897,
+      "dom": 100
+    },
+    {
+      "seconds": 1104,
+      "heap": 9009112,
+      "nodes": 337,
+      "mode": "zoo-ready",
+      "clock": 20.183700000000005,
+      "dom": 100
+    },
+    {
+      "seconds": 1109,
+      "heap": 24305908,
+      "nodes": 268,
+      "mode": "zoo-ready",
+      "clock": 25.2601000000002,
+      "dom": 100
+    },
+    {
+      "seconds": 1114,
+      "heap": 30462144,
+      "nodes": 599,
+      "mode": "zoo-ready",
+      "clock": 30.322600000000282,
+      "dom": 100
+    },
+    {
+      "seconds": 1119,
+      "heap": 31452596,
+      "nodes": 301,
+      "mode": "zoo-ready",
+      "clock": 35.37820000000008,
+      "dom": 100
+    },
+    {
+      "seconds": 1124,
+      "heap": 27180524,
+      "nodes": 909,
+      "mode": "zoo-ready",
+      "clock": 40.440699999999914,
+      "dom": 100
+    },
+    {
+      "seconds": 1130,
+      "heap": 21060524,
+      "nodes": 1520,
+      "mode": "zoo-ready",
+      "clock": 45.51709999999989,
+      "dom": 100
+    },
+    {
+      "seconds": 1135,
+      "heap": 13096768,
+      "nodes": 782,
+      "mode": "zoo-ready",
+      "clock": 50.5725999999997,
+      "dom": 100
+    },
+    {
+      "seconds": 1140,
+      "heap": 17014824,
+      "nodes": 474,
+      "mode": "zoo-ready",
+      "clock": 55.64899999999951,
+      "dom": 100
+    },
+    {
+      "seconds": 1145,
+      "heap": 22503836,
+      "nodes": 1098,
+      "mode": "zoo-ready",
+      "clock": 60.71149999999948,
+      "dom": 100
+    },
+    {
+      "seconds": 1150,
+      "heap": 29020132,
+      "nodes": 582,
+      "mode": "boss",
+      "clock": 5.041699999999957,
+      "dom": 100
+    },
+    {
+      "seconds": 1155,
+      "heap": 9683924,
+      "nodes": 307,
+      "mode": "boss",
+      "clock": 10.104199999999944,
+      "dom": 100
+    },
+    {
+      "seconds": 1160,
+      "heap": 36259912,
+      "nodes": 375,
+      "mode": "boss",
+      "clock": 15.15969999999997,
+      "dom": 100
+    },
+    {
+      "seconds": 1165,
+      "heap": 35994840,
+      "nodes": 584,
+      "mode": "boss",
+      "clock": 20.236100000000018,
+      "dom": 100
+    },
+    {
+      "seconds": 1170,
+      "heap": 33333820,
+      "nodes": 263,
+      "mode": "boss",
+      "clock": 25.02079999999992,
+      "dom": 100
+    },
+    {
+      "seconds": 1175,
+      "heap": 38025048,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.02079999999992,
+      "dom": 100
+    },
+    {
+      "seconds": 1180,
+      "heap": 34702208,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.02079999999992,
+      "dom": 100
+    },
+    {
+      "seconds": 1185,
+      "heap": 23104536,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.02079999999992,
+      "dom": 100
+    },
+    {
+      "seconds": 1190,
+      "heap": 17528840,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.02079999999992,
+      "dom": 100
+    },
+    {
+      "seconds": 1195,
+      "heap": 36864496,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.02079999999992,
+      "dom": 100
+    },
+    {
+      "seconds": 1200,
+      "heap": 36211576,
+      "nodes": 181,
+      "mode": "boss",
+      "clock": 25.02079999999992,
+      "dom": 100
+    }
+  ],
+  "retainedHeap": 6023148,
+  "errors": [],
+  "note": "Real-time lifecycle/memory soak with automated mode changes; not an end-to-end story proof or controlled FPS benchmark."
+}

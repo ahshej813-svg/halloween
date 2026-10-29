@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "duel, burial, three-line epitaph, return",
+    "keyboard karaoke resurrection",
+    "animal, forced quiz, physical door, training",
+    "fork/gouda, zoo timeout, phone, curse",
+    "boss geometry and warning",
+    "pause freezes simulation"
+  ],
+  "errors": []
+}

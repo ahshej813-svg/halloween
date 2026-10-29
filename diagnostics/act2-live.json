@@ -1,0 +1,15 @@
+{
+  "tomVoice": [
+    "Sandra:speech:Microsoft Paulina - Polish (Poland)",
+    "crow",
+    "Tom:speech:Microsoft Adam - Polish (Poland)",
+    "Tom:voice-start"
+  ],
+  "keyboardQuiz": true,
+  "roomFrames": {
+    "samples": 116,
+    "median": 34.70000000000073,
+    "p95": 34.80000000000109
+  },
+  "errors": []
+}

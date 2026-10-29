@@ -1,0 +1,17 @@
+{
+  "version": "Halloween V12 - checkpoints and act I corrections",
+  "complete": false,
+  "sourceSHA256": "cd3ca82a98222fd1729a9569bd4337d30c73f756ab1f3679984f270a71c33df6",
+  "servedBytesMatch": true,
+  "currentTests": {
+    "sharedQuiz": "16/16",
+    "rescueRoutes": "12/12",
+    "checkpoints": "6 groups passed",
+    "avengerIntroduction": "rendered and visually inspected",
+    "nodeSyntax": "passed"
+  },
+  "phoneTested": false,
+  "fullV12Implemented": false,
+  "status": "docs/STATUS.md",
+  "note": "Earlier act2 results describe earlier scope and are historical, not V12 acceptance."
+}

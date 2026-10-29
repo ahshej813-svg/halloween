@@ -1,0 +1,71 @@
+{
+  "elapsed": 33.545,
+  "requests": [
+    "http://127.0.0.1:8000/"
+  ],
+  "errors": [],
+  "voices": [
+    {
+      "name": "Microsoft Adam - Polish (Poland)",
+      "lang": "pl-PL"
+    },
+    {
+      "name": "Microsoft Paulina - Polish (Poland)",
+      "lang": "pl-PL"
+    }
+  ],
+  "audio": {
+    "enabled": true,
+    "state": "running",
+    "speechActive": true,
+    "events": [
+      "Dynia:speech:Microsoft Adam - Polish (Poland)",
+      "Dynia:voice-start",
+      "Dynia:voice-end",
+      "Dynia:laugh:Microsoft Adam - Polish (Poland)",
+      "Dynia:voice-start",
+      "Dynia:voice-end",
+      "Sandra:speech:Microsoft Paulina - Polish (Poland)",
+      "crow",
+      "Sandra:voice-start"
+    ]
+  },
+  "geometry": {
+    "backend": "webgl2-triangles",
+    "draws": 1,
+    "capacity": 524288
+  },
+  "game": {
+    "phase": "explore",
+    "target": null,
+    "visited": false,
+    "bodySeen": false,
+    "arrival": false,
+    "warningSeen": false,
+    "act": {
+      "scene": "cemetery",
+      "order": "help-first",
+      "houseVisited": false,
+      "tool": false,
+      "rescued": false,
+      "rescueAttempted": false,
+      "revived": false,
+      "ending": null,
+      "victim": null,
+      "busy": false,
+      "pending": false,
+      "started": 0,
+      "dice": false,
+      "releaseAt": null,
+      "strangerDead": false,
+      "rescueHint": false
+    },
+    "dialogue": true,
+    "line": [
+      "Sandra",
+      "Jesteśmy za dynią… Cmentarz jest przed nami. Trzymajmy się razem."
+    ],
+    "destination": null
+  },
+  "note": "Real-time Edge prologue and native audio API, no seek/simulate and no speech mock. Speech API events do not prove audible speaker output."
+}

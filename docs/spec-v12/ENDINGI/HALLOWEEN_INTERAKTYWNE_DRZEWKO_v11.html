@@ -1,0 +1,535 @@
+<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Halloween — eksplorator decyzji v11</title><style>
+:root{color-scheme:dark;--bg:#090e17;--surface:#141d2a;--soft:#1b283a;--line:#33435a;--gold:#f0ca80;--text:#f0f4fb;--mute:#acbcd2;--mint:#86d8c9;--red:#eb9f9f}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#1d293d 0,#090e17 65%);font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--text);line-height:1.55}main{max-width:1400px;margin:auto;padding:36px 26px 100px}header{padding:28px;border:1px solid #4a3d2e;border-radius:22px;background:linear-gradient(125deg,#30271f,#172337 45%,#111824);box-shadow:0 18px 60px #0006}h1{font-size:clamp(30px,4vw,52px);margin:0;letter-spacing:-.03em;color:var(--gold)}header p{color:var(--mute);font-size:17px;margin-bottom:0}.pill{display:inline-block;background:#253247;color:#d7e3f4;border:1px solid #3b4c62;border-radius:999px;padding:4px 11px;font-size:12px;font-weight:650;margin:4px 8px 0 0}.layout{display:grid;grid-template-columns:minmax(300px,1fr) minmax(330px,1fr);gap:18px;margin-top:24px}.pane{border:1px solid var(--line);border-radius:18px;background:#121b29;padding:24px}h2{font-size:23px;margin:0 0 16px}h3{font-size:16px;color:var(--gold);margin:20px 0 9px}.note{font-size:13px;color:var(--mute)}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{display:block;color:#dce7f5;font-weight:600;font-size:13px;margin-bottom:5px}select{width:100%;background:#243247;border:1px solid #435770;border-radius:9px;color:var(--text);font-size:14px;padding:11px 10px}.toggle{display:flex;align-items:flex-start;gap:11px;margin:9px 0;font-size:14px;color:#dae5f5}.toggle input{accent-color:#d5b46e;margin-top:5px;scale:1.2}.outcome{border:1px solid #75603e;background:linear-gradient(135deg,#3a3028,#182332);padding:22px;border-radius:16px;min-height:140px}#endingTitle{font-size:29px;font-weight:750;color:var(--gold);margin:2px 0 6px}#endingDesc{color:#d4e1f2}#reasons{padding-left:21px;color:#d7e0ee}.rule{margin:11px 0;padding:10px 12px;border:1px solid #3b4e62;background:#1a2839;border-radius:10px;font-size:13px;color:#c4d2e6}button{background:#2a3c56;color:white;border:1px solid #526987;border-radius:11px;padding:10px 15px;cursor:pointer;font-weight:650}button:hover{background:#405777}button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}.samples{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.viz{margin-top:24px}.viz > section{background:#101824;border:1px solid var(--line);border-radius:18px;padding:22px;margin-top:18px;overflow:hidden}.viz h2{margin-bottom:7px}.scroll{overflow:auto;max-height:820px;border-radius:12px;background:#0b1020;border:1px solid #26374d}.scroll svg{display:block;max-width:none;height:auto;margin:auto}.map svg{width:100%;min-width:960px}.campaign svg{max-width:820px;width:100%}.ending-diagram svg{max-width:1200px;width:100%}.hint{border-left:3px solid #d2b06f;padding-left:14px;color:#d5e0ed;font-size:14px}a{color:#f1ce89}small{color:#adc0d5}@media(max-width:800px){main{padding:16px}.layout{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}header{padding:20px}}
+</style></head><body><main><header><span class="pill">V11</span><span class="pill">Dokumentacja, nie menu w grze</span><h1>HALLOWEEN</h1><p>Interaktywny eksplorator decyzji i mapa świata. Zmieniaj wyposażenie, relacje i flagi, a symulator sam wyznaczy ending, zgodnie z proponowanym priorytetem v10.</p></header>
+<div class="layout"><section class="pane"><h2>Zmienne rozgrywki</h2><div class="formgrid"><div><label for="ai">Artefakt Aleksa</label><select id="ai"><option value="rem">Rem</option><option value="gaznik">Kartka „gaźnik”</option><option value="karma">Psia karma</option><option value="widelec">Widelec</option><option value="gouda">Gouda</option><option value="dlugopis">Długopis</option></select></div><div><label for="si">Artefakt Sandry</label><select id="si"><option value="pluszak">Pluszak Toma</option><option value="rem">Rem</option><option value="gaznik">Kartka „gaźnik”</option><option value="karma">Psia karma</option><option value="widelec">Widelec</option><option value="gouda">Gouda</option><option value="dlugopis">Długopis</option></select></div><div><label for="animal">Wspólny wybór zwierzęcia</label><select id="animal"><option value="chrupek">Chrupek</option><option value="arena">Arena</option><option value="lila">Lila</option><option value="etf">ETF</option></select></div><div><label for="echoes">Uwolnione echa</label><select id="echoes"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3+</option></select></div></div>
+<h3>Zaufanie i przeszłość</h3>
+<label class="toggle"><input id="at" type="checkbox" checked> Aleks ufa Sandrze</label>
+<label class="toggle"><input id="st" type="checkbox" checked> Sandra ufa Aleksowi</label>
+<label class="toggle"><input id="buried" type="checkbox"> Aleks pochował wcześniej Sandrę</label>
+<label class="toggle"><input id="grudge" type="checkbox"> Nierozliczona uraza po pochówku</label>
+<h3>Działania i wyniki minigier</h3>
+<label class="toggle"><input id="af" type="checkbox"> Porażka miauczenia (Arena)</label>
+<label class="toggle"><input id="lt" type="checkbox"> Lila oswojona karmą</label>
+<label class="toggle"><input id="sc" type="checkbox"> Zachowane nożyce</label>
+<label class="toggle"><input id="tr" type="checkbox"> Sandra zaproponowała pozorny rozejm</label>
+<label class="toggle"><input id="back" type="checkbox"> Aleks poparł plan rozejmu</label>
+<div class="samples"><button data-example="1">Przykład E1</button><button data-example="2">E2</button><button data-example="3">E3</button><button data-example="4">E4</button><button data-example="5">E5</button><button data-example="6">E6</button><button data-example="7">E7 sekret</button></div>
+<p class="note">Przykładowe scenariusze służą jedynie do oglądania dokumentacji. Nie są elementem gry ani ekranem wyboru endingów.</p></section>
+<section class="pane"><h2>Wynik symulacji</h2><div class="outcome"><div class="note">AUTOMATYCZNIE WYZNACZONE</div><div id="endingTitle">—</div><div id="endingDesc"></div></div><h3>Dlaczego akurat ten ending?</h3><ol id="reasons"></ol><div class="rule" id="conflicts"></div><div class="rule"><strong>Priorytet reguł v10 (propozycja):</strong><br>Arena fail → Sandra Toma → Dwa cienie → Nóż w plecy → Ostatni świt → Lila przeciw panu → Nieskończona noc.</div><p class="hint"><strong>Uwaga:</strong> końcowe zdrady (E3, E6), priorytety kolizji oraz pusty świat są jeszcze niezatwierdzonymi szczegółami v10. Własne wyposażenie/armor z v11 nie zmienia reguł endingów.</p><p class="note">Zmiany w tym symulatorze nie zapisują się i nie wpływają na faktyczną rozgrywkę.</p></section></div>
+<div class="viz"><section class="map"><h2>01 / Rozmieszczenie świata</h2><p class="note">Schemat przejść, a nie aktualna mapa z kodu. Powiększ przewijaniem poziomym na małym ekranie.</p><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" width="1860" height="1100" viewBox="0 0 1860 1100"><defs>
+ <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#070d18"/><stop offset="1" stop-color="#1a2435"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="150%" height="160%"><feDropShadow dx="0" dy="9" stdDeviation="11" flood-color="#000" flood-opacity=".35"/></filter>
+ <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c5b17e"/></marker>
+ </defs><rect width="1860" height="1100" fill="url(#bg)"/><text x="90" y="70" font-family="DejaVu Sans" font-size="37" font-weight="bold" fill="#f2d394">HALLOWEEN  /  MAPA ŚWIATA 3D ASCII</text><text x="90" y="107" font-family="DejaVu Sans" font-size="18" fill="#b7c4d5">Główna trasa od dyni do Toma • interakcje, dekoracje i przeciwnicy w każdej lokacji</text><path d="M 465 238 L 519 238" fill="none" stroke="#c5b17e" stroke-width="5" marker-end="url(#arrow)" opacity=".88"/><path d="M 910 238 L 964 238" fill="none" stroke="#c5b17e" stroke-width="5" marker-end="url(#arrow)" opacity=".88"/><path d="M 1355 238 L 1409 238" fill="none" stroke="#c5b17e" stroke-width="5" marker-end="url(#arrow)" opacity=".88"/><path d="M 1610 330 L 1610 440" fill="none" stroke="#c5b17e" stroke-width="5" marker-end="url(#arrow)" opacity=".88"/><path d="M 1413 538 L 1367 538" fill="none" stroke="#c5b17e" stroke-width="5" marker-end="url(#arrow)" opacity=".88"/><path d="M 968 538 L 922 538" fill="none" stroke="#c5b17e" stroke-width="5" marker-end="url(#arrow)" opacity=".88"/><path d="M 523 538 L 477 538" fill="none" stroke="#c5b17e" stroke-width="5" marker-end="url(#arrow)" opacity=".88"/><path d="M 275 630 L 275 740" fill="none" stroke="#c5b17e" stroke-width="5" marker-end="url(#arrow)" opacity=".88"/><path d="M 465 838 L 519 838" fill="none" stroke="#c5b17e" stroke-width="5" marker-end="url(#arrow)" opacity=".88"/><path d="M 910 838 L 964 838" fill="none" stroke="#c5b17e" stroke-width="5" marker-end="url(#arrow)" opacity=".88"/><path d="M 1355 838 L 1409 838" fill="none" stroke="#c5b17e" stroke-width="5" marker-end="url(#arrow)" opacity=".88"/><path d="M 1610 929 L 1610 945" fill="none" stroke="#c5b17e" stroke-width="5" marker-end="url(#arrow)" opacity=".88"/><rect x="90" y="155" width="370" height="160" rx="20" fill="#1b2639" stroke="#3c4c70" stroke-width="3" filter="url(#shadow)"/><rect x="91" y="156" width="9" height="158" rx="5" fill="#3c4c70"/><text x="117" y="190" font-family="DejaVu Sans" font-weight="bold" font-size="20" fill="#f1c576">00  PRZED GRĄ</text><text x="117" y="234" font-family="DejaVu Sans" font-weight="bold" font-size="19" fill="#f0f2f6">2 osobiste artefakty</text><text x="117" y="274" font-family="DejaVu Sans" font-size="16" fill="#c8d2de">Gabloty • podzielony ekran</text><rect x="535" y="155" width="370" height="160" rx="20" fill="#1b2639" stroke="#6b465a" stroke-width="3" filter="url(#shadow)"/><rect x="536" y="156" width="9" height="158" rx="5" fill="#6b465a"/><text x="562" y="190" font-family="DejaVu Sans" font-weight="bold" font-size="20" fill="#f1c576">01  WIELKA DYNIA</text><text x="562" y="234" font-family="DejaVu Sans" font-weight="bold" font-size="19" fill="#f0f2f6">Księżyc • chmury</text><text x="562" y="274" font-family="DejaVu Sans" font-size="16" fill="#c8d2de">Ostrzeżenie • kamienna droga</text><rect x="980" y="155" width="370" height="160" rx="20" fill="#1b2639" stroke="#335f70" stroke-width="3" filter="url(#shadow)"/><rect x="981" y="156" width="9" height="158" rx="5" fill="#335f70"/><text x="1007" y="190" font-family="DejaVu Sans" font-weight="bold" font-size="20" fill="#f1c576">02  DROGA</text><text x="1007" y="234" font-family="DejaVu Sans" font-weight="bold" font-size="19" fill="#f0f2f6">Ciało • kruki • gałąź</text><text x="1007" y="274" font-family="DejaVu Sans" font-size="16" fill="#c8d2de">Pierwszy mob: Cień korzeni</text><rect x="1425" y="155" width="370" height="160" rx="20" fill="#1b2639" stroke="#335f70" stroke-width="3" filter="url(#shadow)"/><rect x="1426" y="156" width="9" height="158" rx="5" fill="#335f70"/><text x="1452" y="190" font-family="DejaVu Sans" font-weight="bold" font-size="20" fill="#f1c576">03  BRAMA</text><text x="1452" y="234" font-family="DejaVu Sans" font-weight="bold" font-size="19" fill="#f0f2f6">Żelazo • wózek • płaszcz</text><text x="1452" y="274" font-family="DejaVu Sans" font-size="16" fill="#c8d2de">Opętana wrona, nauka Sandry</text><rect x="1425" y="455" width="370" height="160" rx="20" fill="#1b2639" stroke="#36625c" stroke-width="3" filter="url(#shadow)"/><rect x="1426" y="456" width="9" height="158" rx="5" fill="#36625c"/><text x="1452" y="490" font-family="DejaVu Sans" font-weight="bold" font-size="20" fill="#f1c576">04  CMENTARZ</text><text x="1452" y="534" font-family="DejaVu Sans" font-weight="bold" font-size="19" fill="#f0f2f6">3 groby • znicz • krzyż</text><text x="1452" y="574" font-family="DejaVu Sans" font-size="16" fill="#c8d2de">Mogiłowy cień, ratunek</text><rect x="980" y="455" width="370" height="160" rx="20" fill="#1b2639" stroke="#36625c" stroke-width="3" filter="url(#shadow)"/><rect x="981" y="456" width="9" height="158" rx="5" fill="#36625c"/><text x="1007" y="490" font-family="DejaVu Sans" font-weight="bold" font-size="20" fill="#f1c576">05  DOMEK</text><text x="1007" y="534" font-family="DejaVu Sans" font-weight="bold" font-size="19" fill="#f0f2f6">Ciała • nożyce • hak</text><text x="1007" y="574" font-family="DejaVu Sans" font-size="16" fill="#c8d2de">Krzyż: powrót do nieznajomego</text><rect x="535" y="455" width="370" height="160" rx="20" fill="#1b2639" stroke="#773f50" stroke-width="3" filter="url(#shadow)"/><rect x="536" y="456" width="9" height="158" rx="5" fill="#773f50"/><text x="562" y="490" font-family="DejaVu Sans" font-weight="bold" font-size="20" fill="#f1c576">06  MŚCICIEL</text><text x="562" y="534" font-family="DejaVu Sans" font-weight="bold" font-size="19" fill="#f0f2f6">Najpierw widoczny model</text><text x="562" y="574" font-family="DejaVu Sans" font-size="16" fill="#c8d2de">Potem wybór 5 ofiar</text><rect x="90" y="455" width="370" height="160" rx="20" fill="#1b2639" stroke="#52446e" stroke-width="3" filter="url(#shadow)"/><rect x="91" y="456" width="9" height="158" rx="5" fill="#52446e"/><text x="117" y="490" font-family="DejaVu Sans" font-weight="bold" font-size="20" fill="#f1c576">07  GOON ROOM</text><text x="117" y="534" font-family="DejaVu Sans" font-weight="bold" font-size="19" fill="#f0f2f6">Quizy • ETF • wskrzeszenie</text><text x="117" y="574" font-family="DejaVu Sans" font-size="16" fill="#c8d2de">Pióra 1–3 • tajemnice</text><rect x="90" y="755" width="370" height="160" rx="20" fill="#1b2639" stroke="#326277" stroke-width="3" filter="url(#shadow)"/><rect x="91" y="756" width="9" height="158" rx="5" fill="#326277"/><text x="117" y="790" font-family="DejaVu Sans" font-weight="bold" font-size="20" fill="#f1c576">08  ZOO</text><text x="117" y="834" font-family="DejaVu Sans" font-weight="bold" font-size="19" fill="#f0f2f6">5 fok • 5 żółwi Tomów</text><text x="117" y="874" font-family="DejaVu Sans" font-size="16" fill="#c8d2de">Pióra 4–6 • focza klątwa</text><rect x="535" y="755" width="370" height="160" rx="20" fill="#1b2639" stroke="#335f70" stroke-width="3" filter="url(#shadow)"/><rect x="536" y="756" width="9" height="158" rx="5" fill="#335f70"/><text x="562" y="790" font-family="DejaVu Sans" font-weight="bold" font-size="20" fill="#f1c576">09  PUSTA DROGA</text><text x="562" y="834" font-family="DejaVu Sans" font-weight="bold" font-size="19" fill="#f0f2f6">Po cofnięciu: brak ciała</text><text x="562" y="874" font-family="DejaVu Sans" font-size="16" fill="#c8d2de">Pióra 7–10 • Echa pętli</text><rect x="980" y="755" width="370" height="160" rx="20" fill="#1b2639" stroke="#62455c" stroke-width="3" filter="url(#shadow)"/><rect x="981" y="756" width="9" height="158" rx="5" fill="#62455c"/><text x="1007" y="790" font-family="DejaVu Sans" font-weight="bold" font-size="20" fill="#f1c576">10  PRZEDPOKÓJ</text><text x="1007" y="834" font-family="DejaVu Sans" font-weight="bold" font-size="19" fill="#f0f2f6">Lila • dług • klony</text><text x="1007" y="874" font-family="DejaVu Sans" font-size="16" fill="#c8d2de">Ostatnie przygotowanie</text><rect x="1425" y="755" width="370" height="160" rx="20" fill="#1b2639" stroke="#833f51" stroke-width="3" filter="url(#shadow)"/><rect x="1426" y="756" width="9" height="158" rx="5" fill="#833f51"/><text x="1452" y="790" font-family="DejaVu Sans" font-weight="bold" font-size="20" fill="#f1c576">11  ANGRY TOM</text><text x="1452" y="834" font-family="DejaVu Sans" font-weight="bold" font-size="19" fill="#f0f2f6">Arena 3D • echa • znicz</text><text x="1452" y="874" font-family="DejaVu Sans" font-size="16" fill="#c8d2de">Boss + atak zależny od grobu</text><rect x="1425" y="955" width="370" height="120" rx="20" fill="#1b2639" stroke="#7e6940" stroke-width="3" filter="url(#shadow)"/><rect x="1426" y="956" width="9" height="118" rx="5" fill="#7e6940"/><text x="1452" y="990" font-family="DejaVu Sans" font-weight="bold" font-size="20" fill="#f1c576">12  AUTOMATYCZNY FINAŁ</text><text x="1452" y="1034" font-family="DejaVu Sans" font-weight="bold" font-size="19" fill="#f0f2f6">7 endingów z wcześniejszych flag</text><text x="1452" y="1074" font-family="DejaVu Sans" font-size="16" fill="#c8d2de">Bez końcowego menu</text><rect x="90" y="1007" width="1160" height="60" rx="13" fill="#25364a" opacity=".9"/><text x="110" y="1034" font-family="DejaVu Sans" font-size="17" fill="#eef0f4">GROB / POMOC: kolejność można odwrócić. Nożyce są znalezione w domku.</text><text x="110" y="1055" font-family="DejaVu Sans" font-size="15" fill="#f0d08f">Jedyne przejście skrótowe do endingu 2: niepowodzenie Areny w Goon Roomie.</text></svg></div></section>
+<section class="campaign"><h2>02 / Liniowa historia z rozgałęzieniami</h2><p class="note">Kolorowe odnogi wracają do wspólnej fabuły; tylko Arena może skończyć grę wcześniej.</p><div class="scroll"><svg width="932pt" height="1889pt"
+ viewBox="0.00 0.00 932.10 1888.60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(28.8 1859.8)">
+<title>G</title>
+<polygon fill="#0b1020" stroke="transparent" points="-28.8,28.8 -28.8,-1859.8 903.3,-1859.8 903.3,28.8 -28.8,28.8"/>
+<!-- start&#45;&gt;road -->
+<g id="edge1" class="edge">
+<title>start&#45;&gt;road</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M393.5,-1770.79C393.5,-1757.84 393.5,-1742.44 393.5,-1728.64"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="396.3,-1728.29 393.5,-1720.29 390.7,-1728.29 396.3,-1728.29"/>
+</g>
+<!-- road&#45;&gt;cemetery -->
+<g id="edge2" class="edge">
+<title>road&#45;&gt;cemetery</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M393.5,-1659.79C393.5,-1646.84 393.5,-1631.44 393.5,-1617.64"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="396.3,-1617.29 393.5,-1609.29 390.7,-1617.29 396.3,-1617.29"/>
+</g>
+<!-- cemetery&#45;&gt;grave -->
+<g id="edge3" class="edge">
+<title>cemetery&#45;&gt;grave</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M393.5,-1548.79C393.5,-1535.84 393.5,-1520.44 393.5,-1506.64"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="396.3,-1506.29 393.5,-1498.29 390.7,-1506.29 396.3,-1506.29"/>
+</g>
+<!-- grave&#45;&gt;rescue -->
+<g id="edge4" class="edge">
+<title>grave&#45;&gt;rescue</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M393.5,-1437.79C393.5,-1424.84 393.5,-1409.44 393.5,-1395.64"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="396.3,-1395.29 393.5,-1387.29 390.7,-1395.29 396.3,-1395.29"/>
+</g>
+<!-- rescue&#45;&gt;avenger -->
+<g id="edge5" class="edge">
+<title>rescue&#45;&gt;avenger</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M393.5,-1326.93C393.5,-1313.62 393.5,-1297.87 393.5,-1284.56"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="396.3,-1284.21 393.5,-1276.21 390.7,-1284.21 396.3,-1284.21"/>
+</g>
+<!-- avenger&#45;&gt;sacrifice -->
+<g id="edge6" class="edge">
+<title>avenger&#45;&gt;sacrifice</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M393.5,-1232.68C393.5,-1220.47 393.5,-1204.68 393.5,-1190.39"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="396.3,-1190.18 393.5,-1182.18 390.7,-1190.18 396.3,-1190.18"/>
+</g>
+<!-- sacrifice&#45;&gt;recover -->
+<g id="edge7" class="edge">
+<title>sacrifice&#45;&gt;recover</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M393.5,-1121.79C393.5,-1108.84 393.5,-1093.44 393.5,-1079.64"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="396.3,-1079.29 393.5,-1071.29 390.7,-1079.29 396.3,-1079.29"/>
+</g>
+<!-- recover&#45;&gt;goon -->
+<g id="edge8" class="edge">
+<title>recover&#45;&gt;goon</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M393.5,-1010.79C393.5,-997.84 393.5,-982.44 393.5,-968.64"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="396.3,-968.29 393.5,-960.29 390.7,-968.29 396.3,-968.29"/>
+</g>
+<!-- goon&#45;&gt;animal -->
+<g id="edge9" class="edge">
+<title>goon&#45;&gt;animal</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M393.5,-899.79C393.5,-886.84 393.5,-871.44 393.5,-857.64"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="396.3,-857.29 393.5,-849.29 390.7,-857.29 396.3,-857.29"/>
+</g>
+<!-- animal&#45;&gt;arena -->
+<g id="edge10" class="edge">
+<title>animal&#45;&gt;arena</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M319.37,-788.93C281.82,-774.21 236.13,-756.3 197.53,-741.16"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="198.38,-738.49 189.91,-738.18 196.34,-743.7 198.38,-738.49"/>
+</g>
+<!-- animal&#45;&gt;lila -->
+<g id="edge11" class="edge">
+<title>animal&#45;&gt;lila</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M376.08,-788.79C368.14,-775.47 358.65,-759.57 350.25,-745.47"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="352.47,-743.73 345.97,-738.29 347.66,-746.6 352.47,-743.73"/>
+</g>
+<!-- animal&#45;&gt;chrupek -->
+<g id="edge12" class="edge">
+<title>animal&#45;&gt;chrupek</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M435.84,-788.79C456.38,-774.62 481.16,-757.52 502.51,-742.79"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="504.32,-744.95 509.32,-738.1 501.14,-740.34 504.32,-744.95"/>
+</g>
+<!-- animal&#45;&gt;etf -->
+<g id="edge13" class="edge">
+<title>animal&#45;&gt;etf</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M496.97,-788.93C553.78,-772.97 623.96,-753.26 680.4,-737.4"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="681.32,-740.05 688.27,-735.19 679.81,-734.66 681.32,-740.05"/>
+</g>
+<!-- arena&#45;&gt;hospital -->
+<g id="edge14" class="edge">
+<title>arena&#45;&gt;hospital</title>
+<path fill="none" stroke="#e8a976" stroke-width="1.8" d="M115.5,-677.71C115.5,-661.36 115.5,-640.82 115.5,-623.33"/>
+<polygon fill="#e8a976" stroke="#e8a976" stroke-width="1.8" points="118.3,-623.02 115.5,-615.02 112.7,-623.02 118.3,-623.02"/>
+<text text-anchor="middle" x="140" y="-643.4" font-family="DejaVu Sans" font-size="12.00" fill="#dce6f5">porażka</text>
+</g>
+<!-- arena&#45;&gt;quiz3 -->
+<g id="edge15" class="edge">
+<title>arena&#45;&gt;quiz3</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M193.76,-677.86C250.15,-656.87 325.25,-628.91 377.73,-609.37"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="378.78,-611.97 385.3,-606.55 376.83,-606.72 378.78,-611.97"/>
+<text text-anchor="middle" x="309" y="-643.4" font-family="DejaVu Sans" font-size="12.00" fill="#dce6f5">sukces</text>
+</g>
+<!-- lila&#45;&gt;quiz3 -->
+<g id="edge16" class="edge">
+<title>lila&#45;&gt;quiz3</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M355.61,-677.71C373.96,-657.89 397.99,-631.92 415.8,-612.68"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="417.97,-614.46 421.35,-606.68 413.86,-610.65 417.97,-614.46"/>
+</g>
+<!-- chrupek&#45;&gt;quiz3 -->
+<g id="edge17" class="edge">
+<title>chrupek&#45;&gt;quiz3</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M524.63,-677.71C506.45,-657.89 482.63,-631.92 464.97,-612.68"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="466.95,-610.69 459.48,-606.68 462.82,-614.47 466.95,-610.69"/>
+</g>
+<!-- etf&#45;&gt;quiz3 -->
+<g id="edge18" class="edge">
+<title>etf&#45;&gt;quiz3</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M699.39,-677.86C640.1,-656.83 561.1,-628.79 506.02,-609.25"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="506.89,-606.59 498.42,-606.55 505.02,-611.87 506.89,-606.59"/>
+</g>
+<!-- quiz3&#45;&gt;zoo -->
+<g id="edge19" class="edge">
+<title>quiz3&#45;&gt;zoo</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M440.5,-563.5C440.5,-549.08 440.5,-529.38 440.5,-512.23"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="443.3,-512.05 440.5,-504.05 437.7,-512.05 443.3,-512.05"/>
+</g>
+<!-- zoo&#45;&gt;rewind -->
+<g id="edge20" class="edge">
+<title>zoo&#45;&gt;rewind</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M440.5,-443.79C440.5,-430.84 440.5,-415.44 440.5,-401.64"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="443.3,-401.29 440.5,-393.29 437.7,-401.29 443.3,-401.29"/>
+</g>
+<!-- rewind&#45;&gt;boss -->
+<g id="edge21" class="edge">
+<title>rewind&#45;&gt;boss</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M440.5,-332.79C440.5,-319.84 440.5,-304.44 440.5,-290.64"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="443.3,-290.29 440.5,-282.29 437.7,-290.29 443.3,-290.29"/>
+</g>
+<!-- boss&#45;&gt;flags -->
+<g id="edge22" class="edge">
+<title>boss&#45;&gt;flags</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M440.5,-221.79C440.5,-208.84 440.5,-193.44 440.5,-179.64"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="443.3,-179.29 440.5,-171.29 437.7,-179.29 443.3,-179.29"/>
+</g>
+<!-- flags&#45;&gt;end -->
+<g id="edge23" class="edge">
+<title>flags&#45;&gt;end</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M440.5,-110.79C440.5,-97.84 440.5,-82.44 440.5,-68.64"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="443.3,-68.29 440.5,-60.29 437.7,-68.29 443.3,-68.29"/>
+</g>
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<path fill="#36415e" stroke="#45556e" stroke-width="1.5" d="M523.5,-1831C523.5,-1831 263.5,-1831 263.5,-1831 257.5,-1831 251.5,-1825 251.5,-1819 251.5,-1819 251.5,-1783 251.5,-1783 251.5,-1777 257.5,-1771 263.5,-1771 263.5,-1771 523.5,-1771 523.5,-1771 529.5,-1771 535.5,-1777 535.5,-1783 535.5,-1783 535.5,-1819 535.5,-1819 535.5,-1825 529.5,-1831 523.5,-1831"/>
+<text text-anchor="middle" x="393.5" y="-1806" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">START &#160;• &#160;Aleks i Sandra</text>
+<text text-anchor="middle" x="393.5" y="-1789" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Osobny artefakt dla każdej osoby</text>
+</g>
+<!-- road -->
+<g id="node2" class="node">
+<title>road</title>
+<path fill="#1b2638" stroke="#45556e" stroke-width="1.5" d="M481.5,-1720C481.5,-1720 305.5,-1720 305.5,-1720 299.5,-1720 293.5,-1714 293.5,-1708 293.5,-1708 293.5,-1672 293.5,-1672 293.5,-1666 299.5,-1660 305.5,-1660 305.5,-1660 481.5,-1660 481.5,-1660 487.5,-1660 493.5,-1666 493.5,-1672 493.5,-1672 493.5,-1708 493.5,-1708 493.5,-1714 487.5,-1720 481.5,-1720"/>
+<text text-anchor="middle" x="393.5" y="-1695" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Dynia → droga → ciało</text>
+<text text-anchor="middle" x="393.5" y="-1678" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Tutorial walki Aleksa</text>
+</g>
+<!-- cemetery -->
+<g id="node3" class="node">
+<title>cemetery</title>
+<path fill="#264149" stroke="#45556e" stroke-width="1.5" d="M525,-1609C525,-1609 262,-1609 262,-1609 256,-1609 250,-1603 250,-1597 250,-1597 250,-1561 250,-1561 250,-1555 256,-1549 262,-1549 262,-1549 525,-1549 525,-1549 531,-1549 537,-1555 537,-1561 537,-1561 537,-1597 537,-1597 537,-1603 531,-1609 525,-1609"/>
+<text text-anchor="middle" x="393.5" y="-1584" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Brama i cmentarz</text>
+<text text-anchor="middle" x="393.5" y="-1567" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Tutorial Sandry + walka we dwoje</text>
+</g>
+<!-- grave -->
+<g id="node4" class="node">
+<title>grave</title>
+<path fill="#473c52" stroke="#45556e" stroke-width="1.5" d="M495,-1498C495,-1498 292,-1498 292,-1498 286,-1498 280,-1492 280,-1486 280,-1486 280,-1450 280,-1450 280,-1444 286,-1438 292,-1438 292,-1438 495,-1438 495,-1438 501,-1438 507,-1444 507,-1450 507,-1450 507,-1486 507,-1486 507,-1492 501,-1498 495,-1498"/>
+<text text-anchor="middle" x="393.5" y="-1473" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Wybór jednego grobu</text>
+<text text-anchor="middle" x="393.5" y="-1456" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Gabryś / Borys / Weronika</text>
+</g>
+<!-- rescue -->
+<g id="node5" class="node">
+<title>rescue</title>
+<path fill="#334452" stroke="#45556e" stroke-width="1.5" d="M519,-1387C519,-1387 268,-1387 268,-1387 262,-1387 256,-1381 256,-1375 256,-1375 256,-1339 256,-1339 256,-1333 262,-1327 268,-1327 268,-1327 519,-1327 519,-1327 525,-1327 531,-1333 531,-1339 531,-1339 531,-1375 531,-1375 531,-1381 525,-1387 519,-1387"/>
+<text text-anchor="middle" x="393.5" y="-1362" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Kolejność: grób ↔ ratunek</text>
+<text text-anchor="middle" x="393.5" y="-1345" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Domek / nożyce / ostatnie słowa</text>
+</g>
+<!-- avenger -->
+<g id="node6" class="node">
+<title>avenger</title>
+<path fill="#5e2a36" stroke="#45556e" stroke-width="1.5" d="M514,-1276C514,-1276 273,-1276 273,-1276 267,-1276 261,-1270 261,-1264 261,-1264 261,-1245 261,-1245 261,-1239 267,-1233 273,-1233 273,-1233 514,-1233 514,-1233 520,-1233 526,-1239 526,-1245 526,-1245 526,-1264 526,-1264 526,-1270 520,-1276 514,-1276"/>
+<text text-anchor="middle" x="393.5" y="-1251" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">WIDOCZNY Mściciel → werdykt</text>
+</g>
+<!-- sacrifice -->
+<g id="node7" class="node">
+<title>sacrifice</title>
+<path fill="#593948" stroke="#45556e" stroke-width="1.5" d="M556.5,-1182C556.5,-1182 230.5,-1182 230.5,-1182 224.5,-1182 218.5,-1176 218.5,-1170 218.5,-1170 218.5,-1134 218.5,-1134 218.5,-1128 224.5,-1122 230.5,-1122 230.5,-1122 556.5,-1122 556.5,-1122 562.5,-1122 568.5,-1128 568.5,-1134 568.5,-1134 568.5,-1170 568.5,-1170 568.5,-1176 562.5,-1182 556.5,-1182"/>
+<text text-anchor="middle" x="393.5" y="-1157" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">PIĘĆ OFIAR</text>
+<text text-anchor="middle" x="393.5" y="-1140" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Gabryś / Weronika / Borys / Sandra / Aleks</text>
+</g>
+<!-- recover -->
+<g id="node8" class="node">
+<title>recover</title>
+<path fill="#343d59" stroke="#45556e" stroke-width="1.5" d="M537.5,-1071C537.5,-1071 249.5,-1071 249.5,-1071 243.5,-1071 237.5,-1065 237.5,-1059 237.5,-1059 237.5,-1023 237.5,-1023 237.5,-1017 243.5,-1011 249.5,-1011 249.5,-1011 537.5,-1011 537.5,-1011 543.5,-1011 549.5,-1017 549.5,-1023 549.5,-1023 549.5,-1059 549.5,-1059 549.5,-1065 543.5,-1071 537.5,-1071"/>
+<text text-anchor="middle" x="393.5" y="-1046" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Osobna reakcja / wskrzeszenie</text>
+<text text-anchor="middle" x="393.5" y="-1029" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Epitafium lub karaoke gdy potrzebne</text>
+</g>
+<!-- goon -->
+<g id="node9" class="node">
+<title>goon</title>
+<path fill="#313f61" stroke="#45556e" stroke-width="1.5" d="M533.5,-960C533.5,-960 253.5,-960 253.5,-960 247.5,-960 241.5,-954 241.5,-948 241.5,-948 241.5,-912 241.5,-912 241.5,-906 247.5,-900 253.5,-900 253.5,-900 533.5,-900 533.5,-900 539.5,-900 545.5,-906 545.5,-912 545.5,-912 545.5,-948 545.5,-948 545.5,-954 539.5,-960 533.5,-960"/>
+<text text-anchor="middle" x="393.5" y="-935" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">GOON ROOM</text>
+<text text-anchor="middle" x="393.5" y="-918" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Zaufanie Aleksa i Sandry oddzielnie</text>
+</g>
+<!-- animal -->
+<g id="node10" class="node">
+<title>animal</title>
+<path fill="#4b3c58" stroke="#45556e" stroke-width="1.5" d="M556.5,-849C556.5,-849 230.5,-849 230.5,-849 224.5,-849 218.5,-843 218.5,-837 218.5,-837 218.5,-801 218.5,-801 218.5,-795 224.5,-789 230.5,-789 230.5,-789 556.5,-789 556.5,-789 562.5,-789 568.5,-795 568.5,-801 568.5,-801 568.5,-837 568.5,-837 568.5,-843 562.5,-849 556.5,-849"/>
+<text text-anchor="middle" x="393.5" y="-824" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">WSPÓLNY wybór zwierzęcia</text>
+<text text-anchor="middle" x="393.5" y="-807" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Oboje muszą zaakceptować tę samą opcję</text>
+</g>
+<!-- arena -->
+<g id="node11" class="node">
+<title>arena</title>
+<path fill="#493648" stroke="#45556e" stroke-width="1.5" d="M197.5,-738C197.5,-738 33.5,-738 33.5,-738 27.5,-738 21.5,-732 21.5,-726 21.5,-726 21.5,-690 21.5,-690 21.5,-684 27.5,-678 33.5,-678 33.5,-678 197.5,-678 197.5,-678 203.5,-678 209.5,-684 209.5,-690 209.5,-690 209.5,-726 209.5,-726 209.5,-732 203.5,-738 197.5,-738"/>
+<text text-anchor="middle" x="115.5" y="-713" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">ARENA</text>
+<text text-anchor="middle" x="115.5" y="-696" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Miauczenie co 5 min</text>
+</g>
+<!-- lila -->
+<g id="node12" class="node">
+<title>lila</title>
+<path fill="#315046" stroke="#45556e" stroke-width="1.5" d="M403,-738C403,-738 254,-738 254,-738 248,-738 242,-732 242,-726 242,-726 242,-690 242,-690 242,-684 248,-678 254,-678 254,-678 403,-678 403,-678 409,-678 415,-684 415,-690 415,-690 415,-726 415,-726 415,-732 409,-738 403,-738"/>
+<text text-anchor="middle" x="328.5" y="-713" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">LILA</text>
+<text text-anchor="middle" x="328.5" y="-696" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Pies Toma • karma</text>
+</g>
+<!-- chrupek -->
+<g id="node13" class="node">
+<title>chrupek</title>
+<path fill="#315046" stroke="#45556e" stroke-width="1.5" d="M644,-738C644,-738 459,-738 459,-738 453,-738 447,-732 447,-726 447,-726 447,-690 447,-690 447,-684 453,-678 459,-678 459,-678 644,-678 644,-678 650,-678 656,-684 656,-690 656,-690 656,-726 656,-726 656,-732 650,-738 644,-738"/>
+<text text-anchor="middle" x="551.5" y="-713" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">CHRUPEK</text>
+<text text-anchor="middle" x="551.5" y="-696" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Ciało • HP • szczekanie</text>
+</g>
+<!-- etf -->
+<g id="node14" class="node">
+<title>etf</title>
+<path fill="#345469" stroke="#45556e" stroke-width="1.5" d="M862.5,-738C862.5,-738 700.5,-738 700.5,-738 694.5,-738 688.5,-732 688.5,-726 688.5,-726 688.5,-690 688.5,-690 688.5,-684 694.5,-678 700.5,-678 700.5,-678 862.5,-678 862.5,-678 868.5,-678 874.5,-684 874.5,-690 874.5,-690 874.5,-726 874.5,-726 874.5,-732 868.5,-738 862.5,-738"/>
+<text text-anchor="middle" x="781.5" y="-713" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">ETF + TOM CLICKER</text>
+<text text-anchor="middle" x="781.5" y="-696" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Dług • 10 piór</text>
+</g>
+<!-- hospital -->
+<g id="node15" class="node">
+<title>hospital</title>
+<path fill="#6d4536" stroke="#e1b982" stroke-width="1.5" d="M219,-615C219,-615 12,-615 12,-615 6,-615 0,-609 0,-603 0,-603 0,-567 0,-567 0,-561 6,-555 12,-555 12,-555 219,-555 219,-555 225,-555 231,-561 231,-567 231,-567 231,-603 231,-603 231,-609 225,-615 219,-615"/>
+<text text-anchor="middle" x="115.5" y="-590" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">ENDING 2: SZPITAL</text>
+<text text-anchor="middle" x="115.5" y="-573" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Wspólny sen • checkpoint</text>
+</g>
+<!-- quiz3 -->
+<g id="node16" class="node">
+<title>quiz3</title>
+<path fill="#313f61" stroke="#45556e" stroke-width="1.5" d="M521,-606.5C521,-606.5 360,-606.5 360,-606.5 354,-606.5 348,-600.5 348,-594.5 348,-594.5 348,-575.5 348,-575.5 348,-569.5 354,-563.5 360,-563.5 360,-563.5 521,-563.5 521,-563.5 527,-563.5 533,-569.5 533,-575.5 533,-575.5 533,-594.5 533,-594.5 533,-600.5 527,-606.5 521,-606.5"/>
+<text text-anchor="middle" x="440.5" y="-581.5" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">QUIZ 3: IGA → drzwi</text>
+</g>
+<!-- zoo -->
+<g id="node17" class="node">
+<title>zoo</title>
+<path fill="#315063" stroke="#45556e" stroke-width="1.5" d="M554.5,-504C554.5,-504 326.5,-504 326.5,-504 320.5,-504 314.5,-498 314.5,-492 314.5,-492 314.5,-456 314.5,-456 314.5,-450 320.5,-444 326.5,-444 326.5,-444 554.5,-444 554.5,-444 560.5,-444 566.5,-450 566.5,-456 566.5,-456 566.5,-492 566.5,-492 566.5,-498 560.5,-504 554.5,-504"/>
+<text text-anchor="middle" x="440.5" y="-479" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">ZOO: 5 FOK + 5 ŻÓŁWI</text>
+<text text-anchor="middle" x="440.5" y="-462" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Możliwe focza klątwa i TikTok</text>
+</g>
+<!-- rewind -->
+<g id="node18" class="node">
+<title>rewind</title>
+<path fill="#25444b" stroke="#45556e" stroke-width="1.5" d="M557,-393C557,-393 324,-393 324,-393 318,-393 312,-387 312,-381 312,-381 312,-345 312,-345 312,-339 318,-333 324,-333 324,-333 557,-333 557,-333 563,-333 569,-339 569,-345 569,-345 569,-381 569,-381 569,-387 563,-393 557,-393"/>
+<text text-anchor="middle" x="440.5" y="-368" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">PUSTA DROGA PO COFNIĘCIU</text>
+<text text-anchor="middle" x="440.5" y="-351" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Bez ciała i nieznajomego</text>
+</g>
+<!-- boss -->
+<g id="node19" class="node">
+<title>boss</title>
+<path fill="#632e42" stroke="#45556e" stroke-width="1.5" d="M582,-282C582,-282 299,-282 299,-282 293,-282 287,-276 287,-270 287,-270 287,-234 287,-234 287,-228 293,-222 299,-222 299,-222 582,-222 582,-222 588,-222 594,-228 594,-234 594,-234 594,-270 594,-270 594,-276 588,-282 582,-282"/>
+<text text-anchor="middle" x="440.5" y="-257" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Klony → trans Sandry → ANGRY TOM</text>
+<text text-anchor="middle" x="440.5" y="-240" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Nożyce i echa, znicz i specjalny atak</text>
+</g>
+<!-- flags -->
+<g id="node20" class="node">
+<title>flags</title>
+<path fill="#5d482e" stroke="#e1be74" stroke-width="1.5" d="M571,-171C571,-171 310,-171 310,-171 304,-171 298,-165 298,-159 298,-159 298,-123 298,-123 298,-117 304,-111 310,-111 310,-111 571,-111 571,-111 577,-111 583,-117 583,-123 583,-123 583,-159 583,-159 583,-165 577,-171 571,-171"/>
+<text text-anchor="middle" x="440.5" y="-146" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">AUTOMATYCZNY RESOLVER FLAG</text>
+<text text-anchor="middle" x="440.5" y="-129" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">NIE MA MENU ENDINGÓW</text>
+</g>
+<!-- end -->
+<g id="node21" class="node">
+<title>end</title>
+<path fill="#56402b" stroke="#45556e" stroke-width="1.5" d="M542.5,-60C542.5,-60 338.5,-60 338.5,-60 332.5,-60 326.5,-54 326.5,-48 326.5,-48 326.5,-12 326.5,-12 326.5,-6 332.5,0 338.5,0 338.5,0 542.5,0 542.5,0 548.5,0 554.5,-6 554.5,-12 554.5,-12 554.5,-48 554.5,-48 554.5,-54 548.5,-60 542.5,-60"/>
+<text text-anchor="middle" x="440.5" y="-35" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">ENDING 1 / 3 / 4 / 5 / 6 / 7</text>
+<text text-anchor="middle" x="440.5" y="-18" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Pełna cutscenka i epilog</text>
+</g>
+</g>
+</svg>
+</div></section>
+<section class="ending-diagram"><h2>03 / Drzewo automatycznych endingów</h2><p class="note">TAK / NIE w kolejności priorytetów. Po zwycięstwie gra bada zebrane flagi; nie prosi gracza o wskazanie endingu.</p><div class="scroll"><svg width="1634pt" height="1396pt"
+ viewBox="0.00 0.00 1633.60 1395.60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(28.8 1366.8)">
+<title>G</title>
+<polygon fill="#0b1020" stroke="transparent" points="-28.8,28.8 -28.8,-1366.8 1604.8,-1366.8 1604.8,28.8 -28.8,28.8"/>
+<!-- root&#45;&gt;a -->
+<g id="edge1" class="edge">
+<title>root&#45;&gt;a</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M1264,-1273.97C1264,-1260.82 1264,-1244.95 1264,-1229.34"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="1266.8,-1229.22 1264,-1221.22 1261.2,-1229.22 1266.8,-1229.22"/>
+</g>
+<!-- a&#45;&gt;b -->
+<g id="edge3" class="edge">
+<title>a&#45;&gt;b</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M1219.56,-1118.93C1190.92,-1092.45 1153.41,-1057.78 1122.63,-1029.34"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="1124.34,-1027.11 1116.57,-1023.74 1120.54,-1031.22 1124.34,-1027.11"/>
+<text text-anchor="middle" x="1181.5" y="-1065.4" font-family="DejaVu Sans" font-size="12.00" fill="#dce6f5">NIE</text>
+</g>
+<!-- a&#45;&gt;e2 -->
+<g id="edge2" class="edge">
+<title>a&#45;&gt;e2</title>
+<path fill="none" stroke="#8ac9bf" stroke-width="1.8" d="M1308.7,-1118.47C1340.2,-1089.21 1382.3,-1050.11 1414.25,-1020.43"/>
+<polygon fill="#8ac9bf" stroke="#8ac9bf" stroke-width="1.8" points="1416.54,-1022.12 1420.49,-1014.63 1412.73,-1018.02 1416.54,-1022.12"/>
+<text text-anchor="middle" x="1380.5" y="-1065.4" font-family="DejaVu Sans" font-size="12.00" fill="#dce6f5">TAK</text>
+</g>
+<!-- b&#45;&gt;c -->
+<g id="edge5" class="edge">
+<title>b&#45;&gt;c</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M1017.33,-927.87C991.2,-902.57 958.89,-871.29 931.87,-845.13"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="933.53,-842.84 925.84,-839.29 929.64,-846.86 933.53,-842.84"/>
+<text text-anchor="middle" x="988.5" y="-880.4" font-family="DejaVu Sans" font-size="12.00" fill="#dce6f5">NIE</text>
+</g>
+<!-- b&#45;&gt;e3 -->
+<g id="edge4" class="edge">
+<title>b&#45;&gt;e3</title>
+<path fill="none" stroke="#8ac9bf" stroke-width="1.8" d="M1114.67,-927.87C1147.14,-896.43 1189.14,-855.77 1218.7,-827.15"/>
+<polygon fill="#8ac9bf" stroke="#8ac9bf" stroke-width="1.8" points="1221.01,-828.81 1224.81,-821.23 1217.11,-824.79 1221.01,-828.81"/>
+<text text-anchor="middle" x="1178.5" y="-880.4" font-family="DejaVu Sans" font-size="12.00" fill="#dce6f5">TAK</text>
+</g>
+<!-- c&#45;&gt;d -->
+<g id="edge7" class="edge">
+<title>c&#45;&gt;d</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M829.14,-742.4C803.4,-716.8 771.62,-685.19 745.24,-658.96"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="747,-656.76 739.35,-653.1 743.05,-660.73 747,-656.76"/>
+<text text-anchor="middle" x="801.5" y="-695.4" font-family="DejaVu Sans" font-size="12.00" fill="#dce6f5">NIE</text>
+</g>
+<!-- c&#45;&gt;e6 -->
+<g id="edge6" class="edge">
+<title>c&#45;&gt;e6</title>
+<path fill="none" stroke="#8ac9bf" stroke-width="1.8" d="M924.6,-742.4C956.04,-710.96 996.55,-670.45 1025.03,-641.97"/>
+<polygon fill="#8ac9bf" stroke="#8ac9bf" stroke-width="1.8" points="1027.24,-643.72 1030.92,-636.08 1023.28,-639.76 1027.24,-643.72"/>
+<text text-anchor="middle" x="985.5" y="-695.4" font-family="DejaVu Sans" font-size="12.00" fill="#dce6f5">TAK</text>
+</g>
+<!-- d&#45;&gt;e -->
+<g id="edge9" class="edge">
+<title>d&#45;&gt;e</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M645.77,-559.37C618.36,-532.89 583.39,-499.1 553.16,-469.89"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="554.88,-467.66 547.18,-464.11 550.99,-471.68 554.88,-467.66"/>
+<text text-anchor="middle" x="612.5" y="-510.4" font-family="DejaVu Sans" font-size="12.00" fill="#dce6f5">NIE</text>
+</g>
+<!-- d&#45;&gt;e4 -->
+<g id="edge8" class="edge">
+<title>d&#45;&gt;e4</title>
+<path fill="none" stroke="#8ac9bf" stroke-width="1.8" d="M740,-559.37C777.5,-522.97 829.21,-472.76 863.35,-439.61"/>
+<polygon fill="#8ac9bf" stroke="#8ac9bf" stroke-width="1.8" points="865.3,-441.62 869.09,-434.04 861.4,-437.6 865.3,-441.62"/>
+<text text-anchor="middle" x="801.5" y="-510.4" font-family="DejaVu Sans" font-size="12.00" fill="#dce6f5">TAK</text>
+</g>
+<!-- e&#45;&gt;f -->
+<g id="edge11" class="edge">
+<title>e&#45;&gt;f</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M432.85,-341.91C409.07,-314.57 381.29,-282.65 358.37,-256.3"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="360.32,-254.27 352.96,-250.08 356.1,-257.95 360.32,-254.27"/>
+<text text-anchor="middle" x="404.5" y="-291.4" font-family="DejaVu Sans" font-size="12.00" fill="#dce6f5">NIE</text>
+</g>
+<!-- e&#45;&gt;e7 -->
+<g id="edge10" class="edge">
+<title>e&#45;&gt;e7</title>
+<path fill="none" stroke="#8ac9bf" stroke-width="1.8" d="M539.15,-341.91C568.61,-308.05 604.19,-267.15 629.09,-238.53"/>
+<polygon fill="#8ac9bf" stroke="#8ac9bf" stroke-width="1.8" points="631.41,-240.13 634.55,-232.25 627.19,-236.45 631.41,-240.13"/>
+<text text-anchor="middle" x="595.5" y="-291.4" font-family="DejaVu Sans" font-size="12.00" fill="#dce6f5">TAK</text>
+</g>
+<!-- f&#45;&gt;e1 -->
+<g id="edge13" class="edge">
+<title>f&#45;&gt;e1</title>
+<path fill="none" stroke="#65768c" stroke-width="1.8" d="M266.86,-155.15C244.53,-132.47 217.71,-105.23 195.72,-82.89"/>
+<polygon fill="#65768c" stroke="#65768c" stroke-width="1.8" points="197.55,-80.76 189.94,-77.02 193.56,-84.69 197.55,-80.76"/>
+<text text-anchor="middle" x="238.5" y="-106.4" font-family="DejaVu Sans" font-size="12.00" fill="#dce6f5">NIE</text>
+</g>
+<!-- f&#45;&gt;e5 -->
+<g id="edge12" class="edge">
+<title>f&#45;&gt;e5</title>
+<path fill="none" stroke="#8ac9bf" stroke-width="1.8" d="M357.14,-155.15C382.36,-129.53 413.3,-98.11 436.55,-74.49"/>
+<polygon fill="#8ac9bf" stroke="#8ac9bf" stroke-width="1.8" points="438.68,-76.32 442.29,-68.66 434.68,-72.4 438.68,-76.32"/>
+<text text-anchor="middle" x="417.5" y="-106.4" font-family="DejaVu Sans" font-size="12.00" fill="#dce6f5">TAK</text>
+</g>
+<!-- root -->
+<g id="node1" class="node">
+<title>root</title>
+<path fill="#36445f" stroke="#45556e" stroke-width="1.5" d="M1448,-1338C1448,-1338 1080,-1338 1080,-1338 1074,-1338 1068,-1332 1068,-1326 1068,-1326 1068,-1286 1068,-1286 1068,-1280 1074,-1274 1080,-1274 1080,-1274 1448,-1274 1448,-1274 1454,-1274 1460,-1280 1460,-1286 1460,-1286 1460,-1326 1460,-1326 1460,-1332 1454,-1338 1448,-1338"/>
+<text text-anchor="middle" x="1264" y="-1311.4" font-family="DejaVu Sans" font-size="17.00" fill="#f4f6fb">START &#160;• &#160;CAŁA GRA</text>
+<text text-anchor="middle" x="1264" y="-1292.4" font-family="DejaVu Sans" font-size="17.00" fill="#f4f6fb">Flagi z artefaktów, zaufania, quizów i walk</text>
+</g>
+<!-- a -->
+<g id="node2" class="node">
+<title>a</title>
+<path fill="#45394b" stroke="#45556e" stroke-width="1.5" d="M1252.88,-1216.49C1252.88,-1216.49 1127.12,-1165.51 1127.12,-1165.51 1121.56,-1163.25 1121.56,-1158.75 1127.12,-1156.49 1127.12,-1156.49 1252.88,-1105.51 1252.88,-1105.51 1258.44,-1103.25 1269.56,-1103.25 1275.12,-1105.51 1275.12,-1105.51 1400.88,-1156.49 1400.88,-1156.49 1406.44,-1158.75 1406.44,-1163.25 1400.88,-1165.51 1400.88,-1165.51 1275.12,-1216.49 1275.12,-1216.49 1269.56,-1218.75 1258.44,-1218.75 1252.88,-1216.49"/>
+<text text-anchor="middle" x="1264" y="-1166" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Arena wybrana</text>
+<text text-anchor="middle" x="1264" y="-1149" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">i porażka?</text>
+</g>
+<!-- b -->
+<g id="node3" class="node">
+<title>b</title>
+<path fill="#45394b" stroke="#45556e" stroke-width="1.5" d="M1054.36,-1033.09C1054.36,-1033.09 837.64,-978.91 837.64,-978.91 831.82,-977.46 831.82,-974.54 837.64,-973.09 837.64,-973.09 1054.36,-918.91 1054.36,-918.91 1060.18,-917.46 1071.82,-917.46 1077.64,-918.91 1077.64,-918.91 1294.36,-973.09 1294.36,-973.09 1300.18,-974.54 1300.18,-977.46 1294.36,-978.91 1294.36,-978.91 1077.64,-1033.09 1077.64,-1033.09 1071.82,-1034.54 1060.18,-1034.54 1054.36,-1033.09"/>
+<text text-anchor="middle" x="1066" y="-981" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Sandra ma pluszaka</text>
+<text text-anchor="middle" x="1066" y="-964" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">i nie ufa / była pochowana?</text>
+</g>
+<!-- c -->
+<g id="node4" class="node">
+<title>c</title>
+<path fill="#45394b" stroke="#45556e" stroke-width="1.5" d="M865.33,-848.2C865.33,-848.2 638.67,-793.8 638.67,-793.8 632.83,-792.4 632.83,-789.6 638.67,-788.2 638.67,-788.2 865.33,-733.8 865.33,-733.8 871.17,-732.4 882.83,-732.4 888.67,-733.8 888.67,-733.8 1115.33,-788.2 1115.33,-788.2 1121.17,-789.6 1121.17,-792.4 1115.33,-793.8 1115.33,-793.8 888.67,-848.2 888.67,-848.2 882.83,-849.6 871.17,-849.6 865.33,-848.2"/>
+<text text-anchor="middle" x="877" y="-796" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Oboje nie ufają</text>
+<text text-anchor="middle" x="877" y="-779" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">lub nierozliczony pochówek?</text>
+</g>
+<!-- d -->
+<g id="node5" class="node">
+<title>d</title>
+<path fill="#45394b" stroke="#45556e" stroke-width="1.5" d="M681.46,-662.7C681.46,-662.7 494.54,-609.3 494.54,-609.3 488.77,-607.65 488.77,-604.35 494.54,-602.7 494.54,-602.7 681.46,-549.3 681.46,-549.3 687.23,-547.65 698.77,-547.65 704.54,-549.3 704.54,-549.3 891.46,-602.7 891.46,-602.7 897.23,-604.35 897.23,-607.65 891.46,-609.3 891.46,-609.3 704.54,-662.7 704.54,-662.7 698.77,-664.35 687.23,-664.35 681.46,-662.7"/>
+<text text-anchor="middle" x="693" y="-611" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Pluszak + plan rozejmu</text>
+<text text-anchor="middle" x="693" y="-594" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">+ poparcie Aleksa?</text>
+</g>
+<!-- e -->
+<g id="node6" class="node">
+<title>e</title>
+<path fill="#45394b" stroke="#45556e" stroke-width="1.5" d="M474.45,-477.74C474.45,-477.74 224.55,-407.26 224.55,-407.26 218.77,-405.63 218.77,-402.37 224.55,-400.74 224.55,-400.74 474.45,-330.26 474.45,-330.26 480.23,-328.63 491.77,-328.63 497.55,-330.26 497.55,-330.26 747.45,-400.74 747.45,-400.74 753.23,-402.37 753.23,-405.63 747.45,-407.26 747.45,-407.26 497.55,-477.74 497.55,-477.74 491.77,-479.37 480.23,-479.37 474.45,-477.74"/>
+<text text-anchor="middle" x="486" y="-417.5" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Karma Aleksa + pluszak Sandry</text>
+<text text-anchor="middle" x="486" y="-400.5" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">oboje ufają + Lila oswojona</text>
+<text text-anchor="middle" x="486" y="-383.5" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">nożyce + ≥ 2 echa?</text>
+</g>
+<!-- f -->
+<g id="node7" class="node">
+<title>f</title>
+<path fill="#45394b" stroke="#45556e" stroke-width="1.5" d="M300.49,-258.6C300.49,-258.6 120.51,-205.4 120.51,-205.4 114.75,-203.7 114.75,-200.3 120.51,-198.6 120.51,-198.6 300.49,-145.4 300.49,-145.4 306.25,-143.7 317.75,-143.7 323.51,-145.4 323.51,-145.4 503.49,-198.6 503.49,-198.6 509.25,-200.3 509.25,-203.7 503.49,-205.4 503.49,-205.4 323.51,-258.6 323.51,-258.6 317.75,-260.3 306.25,-260.3 300.49,-258.6"/>
+<text text-anchor="middle" x="312" y="-207" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Wspólnie wybrana Lila</text>
+<text text-anchor="middle" x="312" y="-190" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">i oswojona karmą?</text>
+</g>
+<!-- e1 -->
+<g id="node8" class="node">
+<title>e1</title>
+<path fill="#5e3a36" stroke="#e0a58f" stroke-width="1.5" d="M294,-77C294,-77 12,-77 12,-77 6,-77 0,-71 0,-65 0,-65 0,-12 0,-12 0,-6 6,0 12,0 12,0 294,0 294,0 300,0 306,-6 306,-12 306,-12 306,-65 306,-65 306,-71 300,-77 294,-77"/>
+<text text-anchor="middle" x="153" y="-52" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">01 &#160;NIESKOŃCZONA NOC</text>
+<text text-anchor="middle" x="153" y="-35" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Sandra przy drodze, Aleks na krzyżu</text>
+<text text-anchor="middle" x="153" y="-18" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Potem Alex (X) i Salsa</text>
+</g>
+<!-- e2 -->
+<g id="node9" class="node">
+<title>e2</title>
+<path fill="#43546b" stroke="#a5bad4" stroke-width="1.5" d="M1564,-1014.5C1564,-1014.5 1358,-1014.5 1358,-1014.5 1352,-1014.5 1346,-1008.5 1346,-1002.5 1346,-1002.5 1346,-949.5 1346,-949.5 1346,-943.5 1352,-937.5 1358,-937.5 1358,-937.5 1564,-937.5 1564,-937.5 1570,-937.5 1576,-943.5 1576,-949.5 1576,-949.5 1576,-1002.5 1576,-1002.5 1576,-1008.5 1570,-1014.5 1564,-1014.5"/>
+<text text-anchor="middle" x="1461" y="-989.5" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">02 &#160;IMPREZA HALLOWEEN</text>
+<text text-anchor="middle" x="1461" y="-972.5" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Szpital + wspólny sen</text>
+<text text-anchor="middle" x="1461" y="-955.5" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Potem checkpoint</text>
+</g>
+<!-- e3 -->
+<g id="node10" class="node">
+<title>e3</title>
+<path fill="#673c52" stroke="#d89ab5" stroke-width="1.5" d="M1330.5,-821C1330.5,-821 1179.5,-821 1179.5,-821 1173.5,-821 1167.5,-815 1167.5,-809 1167.5,-809 1167.5,-773 1167.5,-773 1167.5,-767 1173.5,-761 1179.5,-761 1179.5,-761 1330.5,-761 1330.5,-761 1336.5,-761 1342.5,-767 1342.5,-773 1342.5,-773 1342.5,-809 1342.5,-809 1342.5,-815 1336.5,-821 1330.5,-821"/>
+<text text-anchor="middle" x="1255" y="-796" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">03 &#160;SANDRA TOMA</text>
+<text text-anchor="middle" x="1255" y="-779" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Zdrada i reset</text>
+</g>
+<!-- e4 -->
+<g id="node11" class="node">
+<title>e4</title>
+<path fill="#5c344b" stroke="#d89ab5" stroke-width="1.5" d="M986.5,-434C986.5,-434 811.5,-434 811.5,-434 805.5,-434 799.5,-428 799.5,-422 799.5,-422 799.5,-386 799.5,-386 799.5,-380 805.5,-374 811.5,-374 811.5,-374 986.5,-374 986.5,-374 992.5,-374 998.5,-380 998.5,-386 998.5,-386 998.5,-422 998.5,-422 998.5,-428 992.5,-434 986.5,-434"/>
+<text text-anchor="middle" x="899" y="-409" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">04 &#160;NÓŻ W PLECY</text>
+<text text-anchor="middle" x="899" y="-392" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Pozorny rozejm i reset</text>
+</g>
+<!-- e5 -->
+<g id="node12" class="node">
+<title>e5</title>
+<path fill="#34644e" stroke="#8ccaae" stroke-width="1.5" d="M584,-68.5C584,-68.5 358,-68.5 358,-68.5 352,-68.5 346,-62.5 346,-56.5 346,-56.5 346,-20.5 346,-20.5 346,-14.5 352,-8.5 358,-8.5 358,-8.5 584,-8.5 584,-8.5 590,-8.5 596,-14.5 596,-20.5 596,-20.5 596,-56.5 596,-56.5 596,-62.5 590,-68.5 584,-68.5"/>
+<text text-anchor="middle" x="471" y="-43.5" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">05 &#160;LILA PRZECIW PANU</text>
+<text text-anchor="middle" x="471" y="-26.5" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Wolność pary, Lila uwięziona</text>
+</g>
+<!-- e6 -->
+<g id="node13" class="node">
+<title>e6</title>
+<path fill="#5e4567" stroke="#d6a9df" stroke-width="1.5" d="M1164.5,-636C1164.5,-636 955.5,-636 955.5,-636 949.5,-636 943.5,-630 943.5,-624 943.5,-624 943.5,-588 943.5,-588 943.5,-582 949.5,-576 955.5,-576 955.5,-576 1164.5,-576 1164.5,-576 1170.5,-576 1176.5,-582 1176.5,-588 1176.5,-588 1176.5,-624 1176.5,-624 1176.5,-630 1170.5,-636 1164.5,-636"/>
+<text text-anchor="middle" x="1060" y="-611" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">06 &#160;DWA CIENIE</text>
+<text text-anchor="middle" x="1060" y="-594" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Pusty świat (PROPOZYCJA)</text>
+</g>
+<!-- e7 -->
+<g id="node14" class="node">
+<title>e7</title>
+<path fill="#686038" stroke="#f0d38d" stroke-width="1.5" d="M752.5,-232C752.5,-232 567.5,-232 567.5,-232 561.5,-232 555.5,-226 555.5,-220 555.5,-220 555.5,-184 555.5,-184 555.5,-178 561.5,-172 567.5,-172 567.5,-172 752.5,-172 752.5,-172 758.5,-172 764.5,-178 764.5,-184 764.5,-184 764.5,-220 764.5,-220 764.5,-226 758.5,-232 752.5,-232"/>
+<text text-anchor="middle" x="660" y="-207" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">07 &#160;OSTATNI ŚWIT</text>
+<text text-anchor="middle" x="660" y="-190" font-family="DejaVu Sans" font-size="15.00" fill="#f4f6fb">Sekret: pokonanie dyni</text>
+</g>
+</g>
+</svg>
+</div></section></div><p class="note" style="text-align:center">HALLOWEEN / v11 • dokumentacja świata i decyzji. Własne moby, broń, pancerze i rozmieszczenie w Z00–Z12 to propozycje.</p></main>
+<script>
+const $=id=>document.getElementById(id);
+const ids=['ai','si','animal','echoes','at','st','buried','grudge','af','lt','sc','tr','back'];
+const titles={1:['Nieskończona noc','Po Toma zwycięstwie dynia zamyka pętlę: Sandra przy drodze, Aleks na krzyżu. Dopiero potem idą Alex (X) i Salsa.'],2:['Impreza Halloween','Bohaterowie budzą się w szpitalu po wypadku; oboje pamiętają ten sam sen. Możliwy checkpoint przed wyborem zwierzęcia.'],3:['Sandra Toma','Sandra z pluszakiem przechodzi na stronę Toma. Dynia może uruchomić reset.'],4:['Nóż w plecy','Sandra udaje rozejm, Aleks przeprowadza podstęp; pokonanie Toma nie usuwa dyni.'],5:['Lila przeciw panu','Oswojona Lila ratuje parę kosztem swojej wolności.'],6:['Dwa cienie','Zdrada rozdziela bohaterów, a jeden trafia do pustej kopii świata (propozycja fabularna).'],7:['Ostatni świt','Pełne zaufanie, Lila, karma, pluszak, nożyce i echa umożliwiają walkę z dynią i przerwanie pętli.']};
+function state(){return {ai:$('ai').value,si:$('si').value,animal:$('animal').value,e:+$('echoes').value,at:$('at').checked,st:$('st').checked,buried:$('buried').checked,grudge:$('grudge').checked,af:$('af').checked,lt:$('lt').checked,sc:$('sc').checked,tr:$('tr').checked,back:$('back').checked}}
+function resolve(s){let why=[];let e=1;
+ if(s.animal==='arena'&&s.af){e=2;why=['Oboje wybrali Arenę','Nie zaliczyli miauczenia — omdlenie i szpital'];}
+ else if(s.si==='pluszak'&&(!s.st||s.buried)){e=3;why=['Sandra ma pluszaka Toma',s.buried?'Aleks wcześniej pochował Sandrę':'Sandra nie ufa Aleksowi'];}
+ else if((!s.at&&!s.st)||s.grudge){e=6;why=['Wzajemna nieufność lub nierozliczony pochówek','Nie uruchomił się wcześniejszy warunek Sandry Toma'];}
+ else if(s.si==='pluszak'&&s.tr&&s.back){e=4;why=['Sandra ma pluszaka','Pozorny rozejm został wcześniej zaproponowany i poparty'];}
+ else if(s.ai==='karma'&&s.si==='pluszak'&&s.at&&s.st&&s.animal==='lila'&&s.lt&&s.sc&&s.e>=2){e=7;why=['Aleks ma karmę, Sandra pluszaka','Oboje ufają sobie, wspólnie wybrali Lilę i oswoili ją','Nożyce zachowane, uwolniono co najmniej dwa echa'];}
+ else if(s.animal==='lila'&&s.lt){e=5;why=['Oboje wybrali Lilę i oswoili ją karmą','Nie spełniono wcześniejszych, ważniejszych przesłanek'];}
+ else {e=1;why=['Nie został spełniony żaden warunek specjalnego endingu','Dynia uruchamia zwykłą nieskończoną pętlę'];}
+ return {e,why};}
+function draw(){const s=state();const x=resolve(s);$('endingTitle').textContent=`${x.e}. ${titles[x.e][0]}`;$('endingDesc').textContent=titles[x.e][1];$('reasons').replaceChildren(...x.why.map(t=>{const li=document.createElement('li');li.textContent=t;return li}));
+ let notes=[];if(s.lt&&s.animal!=='lila') notes.push('Lila nie jest wspólnym wyborem — oznaczenie oswojenia nie jest realistyczną ścieżką.');if(s.lt&&s.ai!=='karma'&&s.si!=='karma') notes.push('Oswojenie Lili wymaga karmy u jednego z graczy.');if(s.e>0&&!s.sc) notes.push('Uwalnianie ech powinno wymagać nożyc.');if(s.af&&s.animal!=='arena') notes.push('Porażka Areny działa tylko po wybraniu Areny.');$('conflicts').textContent=notes.length?'⚠ '+notes.join(' '):'✓ Scenariusz flag wygląda spójnie z podstawowymi zależnościami.';}
+function example(n){for(const id of ['at','st'])$(id).checked=true;for(const id of ['buried','grudge','af','lt','sc','tr','back'])$(id).checked=false;$('ai').value='rem';$('si').value='rem';$('animal').value='chrupek';$('echoes').value='0';
+ if(n===2){$('animal').value='arena';$('af').checked=true}if(n===3){$('si').value='pluszak';$('st').checked=false}if(n===4){$('si').value='pluszak';$('tr').checked=true;$('back').checked=true}if(n===5){$('ai').value='karma';$('animal').value='lila';$('lt').checked=true}if(n===6){$('at').checked=false;$('st').checked=false}if(n===7){$('ai').value='karma';$('si').value='pluszak';$('animal').value='lila';$('lt').checked=true;$('sc').checked=true;$('echoes').value='2'}draw()}
+for(const id of ids)$(id).addEventListener('change',draw);document.querySelectorAll('[data-example]').forEach(b=>b.addEventListener('click',()=>example(+b.dataset.example)));draw();
+</script></body></html>

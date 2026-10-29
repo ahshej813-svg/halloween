@@ -1,0 +1,47 @@
+{
+  "errors": [],
+  "result": {
+    "active": true,
+    "phase": "waiting",
+    "victim": "weronika",
+    "seated": {
+      "aleks": true,
+      "sandra": true
+    },
+    "quiz": {
+      "open": true,
+      "round": 1,
+      "cursor": {
+        "aleks": 0,
+        "sandra": 0
+      },
+      "answers": [
+        {
+          "aleks": 1,
+          "sandra": 0
+        },
+        {
+          "aleks": 3,
+          "sandra": 0
+        }
+      ],
+      "ink": {
+        "aleks": "pen",
+        "sandra": "red"
+      },
+      "complete": true
+    },
+    "used": [],
+    "inventory": {
+      "aleks": {
+        "id": "pen",
+        "used": true
+      },
+      "sandra": {
+        "id": "tom",
+        "used": false
+      }
+    },
+    "loadout": false
+  }
+}

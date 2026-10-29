@@ -1,0 +1,89 @@
+{
+  "reports": [
+    {
+      "target": "gabrys",
+      "order": "help",
+      "item": "take",
+      "strangerDead": true,
+      "hint": true
+    },
+    {
+      "target": "gabrys",
+      "order": "help",
+      "item": "flee",
+      "strangerDead": true,
+      "hint": false
+    },
+    {
+      "target": "gabrys",
+      "order": "grave",
+      "item": "take",
+      "strangerDead": true,
+      "hint": false
+    },
+    {
+      "target": "gabrys",
+      "order": "grave",
+      "item": "flee",
+      "strangerDead": true,
+      "hint": false
+    },
+    {
+      "target": "weronika",
+      "order": "help",
+      "item": "take",
+      "strangerDead": true,
+      "hint": true
+    },
+    {
+      "target": "weronika",
+      "order": "help",
+      "item": "flee",
+      "strangerDead": true,
+      "hint": false
+    },
+    {
+      "target": "weronika",
+      "order": "grave",
+      "item": "take",
+      "strangerDead": true,
+      "hint": false
+    },
+    {
+      "target": "weronika",
+      "order": "grave",
+      "item": "flee",
+      "strangerDead": true,
+      "hint": false
+    },
+    {
+      "target": "boris",
+      "order": "help",
+      "item": "take",
+      "strangerDead": true,
+      "hint": true
+    },
+    {
+      "target": "boris",
+      "order": "help",
+      "item": "flee",
+      "strangerDead": true,
+      "hint": false
+    },
+    {
+      "target": "boris",
+      "order": "grave",
+      "item": "take",
+      "strangerDead": true,
+      "hint": false
+    },
+    {
+      "target": "boris",
+      "order": "grave",
+      "item": "flee",
+      "strangerDead": true,
+      "hint": false
+    }
+  ],
+  "errors": []
+}

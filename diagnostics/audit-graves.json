@@ -1,0 +1,37 @@
+{
+  "reports": [
+    {
+      "target": "gabrys",
+      "quote": "Jakby Aleks umarł, to bym zapomniał po 3 sekundach.",
+      "grave": {
+        "median": 34.69999999999982,
+        "p95": 34.899999999999636,
+        "samples": 125
+      },
+      "cross": {
+        "median": 34.69999999999982,
+        "p95": 34.899999999999636,
+        "samples": 130
+      }
+    },
+    {
+      "target": "weronika",
+      "quote": "Ummmm… O kurwa, naucz się kurwa grać wreszcie.",
+      "grave": {
+        "median": 34.69999999999982,
+        "p95": 34.899999999999864,
+        "samples": 124
+      }
+    },
+    {
+      "target": "boris",
+      "quote": "Jednak Gabryś to był zajebisty ziom.",
+      "grave": {
+        "median": 34.69999999999982,
+        "p95": 34.80000000000018,
+        "samples": 124
+      }
+    }
+  ],
+  "errors": []
+}

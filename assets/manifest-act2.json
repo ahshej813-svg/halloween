@@ -1,0 +1,55 @@
+{
+  "style": "ASCII; monospace; cold moonlit world, stage-specific storm/fire",
+  "runtime": "embedded in index.html; no external fetch",
+  "items": [
+    {
+      "id": "rem",
+      "role": "portrait, bed",
+      "source": "Valve illustration via Deadlock Guru",
+      "owner": "either player"
+    },
+    {
+      "id": "paper",
+      "role": "repeated gaźnik, crevice",
+      "source": "code-authored ASCII",
+      "owner": "either player"
+    },
+    {
+      "id": "food",
+      "role": "bowl",
+      "source": "code-authored ASCII",
+      "owner": "either player"
+    },
+    {
+      "id": "fork",
+      "role": "grate",
+      "source": "code-authored ASCII",
+      "owner": "either player"
+    },
+    {
+      "id": "gouda",
+      "role": "mouse hole",
+      "source": "code-authored ASCII",
+      "owner": "either player"
+    },
+    {
+      "id": "pen",
+      "role": "blue quiz ink",
+      "source": "code-authored ASCII",
+      "owner": "either player"
+    },
+    {
+      "id": "tom",
+      "role": "plush turtle, niche",
+      "source": "code-authored ASCII",
+      "owner": "Sandra only"
+    }
+  ],
+  "rem": {
+    "reference": "rem-source.webp",
+    "text": "rem-ascii.txt",
+    "columns": 48,
+    "rows": 42,
+    "sha256": "4083d08ef400eae8ebf0b073d9daddc2575f74c63148c09ae28ebe9e4ba86a99"
+  }
+}

@@ -1,0 +1,48 @@
+JESTEŚ GŁÓWNYM PROGRAMISTĄ I INTEGRATOREM ISTNIEJĄCEJ GRY „HALLOWEEN”. Masz w otwartym projekcie dostęp do repozytorium gry. Dołączony ZIP zawiera kompletną dokumentację oraz jeden nadrzędny kanon.
+
+CEL: doprowadź istniejącą przeglądarkową grę do kompletnej grywalnej wersji: wszystkie akty, dwie lokalne postacie, interaktywny świat 3D ASCII, wszystkie rodzaje wyborów, walka, minigry, boss Tom, siedem AUTOMATYCZNYCH zakończeń, dialogi, zapis/checkpointy, optymalizacja i testy. Nie zatrzymuj się celowo na prototypie. Podziel zadanie na małe etapy i kontynuuj do możliwie pełnej implementacji w granicach faktycznie dostępnej sesji, zapisując status i testy. Nie deklaruj sukcesu bez sprawdzenia.
+
+OBOWIĄZKOWA KOLEJNOŚĆ CZYTANIA:
+1. 00_START_TUTAJ.md
+2. 02_KANON_I_KOREKTY_v12.md — rozstrzyga sprzeczności
+3. 03_KONTEKST_ROZMOWY_v12.md — wszystkie istotne ustalenia autora
+4. SCENARIUSZ/HALLOWEEN_SCENARIUSZ_V8.md — szczegółowe dialogi i rozgałęzienia (z korektami v12)
+5. ENDINGI/HALLOWEEN_WARUNKI_AUTOMATYCZNE_v10.md — resolver końca, kolejność kolizji robocza
+6. MAPA_V11/HALLOWEEN_SWIAT_WALKA_I_MAPA_v11.md — topologia, dekoracje, przeciwnicy i ekwipunek
+7. DIALOGI/HALLOWEEN_DODATEK_v6_ASCII_MSCICIEL_DIALOGI.md
+8. TECH/HALLOWEEN_SPEC_v5_Codex.md i TECH/SPEC_NADRZEDNA_v7.md; TESTY/MACIERZ_TESTOW.md.
+
+REGUŁA ŹRÓDEŁ: późniejszy ZATWIERDZONY wybór użytkownika wygrywa ze starszą treścią. NOWA PROPOZYCJA asystenta nie jest tym samym co zatwierdzony kanon. W szczególności gra nazywa się Halloween, jest w prawdziwym 3D ASCII, bohaterowie nie spotykają pary X/Salsa po zoo, ending 2 to szpital, a endingi są automatyczne. Nie wolno wdrożyć końcowego menu z listą 7 zakończeń. Wątki E6 i kolejność konfliktujących przesłanek E3/E4/E6 mogą wymagać konfigurowalnego, jasno opisanego zachowania roboczego.
+
+NAJPIERW AUDYT REPOZYTORIUM:
+- Ustal framework, plik startowy, sposób uruchomienia, zapis stanu, renderer 3D ASCII, sceny, assety, zdarzenia, audio, testy i zależności. Uruchom projekt i zrób bazowe screenshoty lub opis faktycznie zaobserwowanych problemów.
+- Zidentyfikuj bug: Mściciel jest słabo widoczny/niewidoczny w akcie I i mówi o przejściu przed bramę zanim zostanie czytelnie przedstawiony. Sprawdź spawn, kamerę, oświetlenie, occlusion/culling, alpha/depth, ASCII shader i sekwencję wydarzeń. Napraw bez rozwalenia trasy.
+- Sprawdź, gdzie obecne ASCII staje się zbyt nieczytelne; zapewnij kontury, kontrast, dynamiczną jakość renderingu i wyraźny HUD. Zachowaj księżycowy, horrorowy wygląd (bez rzeczki i pomarańczowego oświetlenia).
+- Nie pisz aplikacji od zera, jeśli istniejący kod można rozwinąć; nie usuń działających scen bez powodu.
+
+WDROŻENIE CAŁEJ GRY:
+A. Dwoje graczy na JEDNEJ klawiaturze laptopa: Aleks WASD, Sandra strzałki. Interakcja, podstawowy atak, unik i zdolność każdej postaci, przemapowanie klawiszy i test ghostingu, bez wymagania dwóch myszy. Kooperacyjna walka i pomoc upadłemu partnerowi.
+B. 3D ASCII: prawdziwe modele, kamera, geometria, kolizje, otoczenie, postprocessing GPU jeśli wykonalny w stosie. Czytelne oznaczenia ataków i znaczników interakcji poza mrocznym shaderem.
+C. Mapa Z00–Z12: cmentarz, trzy groby, krzyż, domek, nożyce, Goon Room, zoo, powrót czasowy, areny i finały. Uzupełnij dekoracje i interakcje bez budowania labiryntu ani zasłaniania postaci. Nowe ozdoby z v11 to propozycje do testów.
+D. Jeden prywatny artefakt na osobę, bez handlu. Niezależne sloty broni, pancerza i rekwizytów. Wykorzystaj fabularne funkcje Rem/gaznik/karma/widelec/gouda/długopis/pluszak; nożyce można znaleźć, a nie wybierać na starcie.
+E. Przeciwnicy szkoleniowi przed zoo (Cień korzeni, Opętana wrona, Mogiłowy cień, Kościana ręka, Żółw marionetka, Echo pętli), wyważony tutorial dla obu osób, krótkie checkpointy. Nie zastępuj kanonicznych pięciu fok.
+F. Zaimplementuj kompletny scenariusz z dialogami, reakcjami na wybór grobu/znicza, tonem miłym/niemiłym i wyzwiskiem Gabrysia, wskrzeszeniami, zaufaniem, trio umarłych i ich echami, ostrzeżeniem nieznajomego, klonem Mściciela. Dialogi nie mogą znikać między cutscenkami.
+G. Goon Room: Epitafium, Karaoke Toma z fallbackiem bez mikrofonu, quiz 1 zaufanie, quiz 2 JEDNO wspólne zwierzę, quiz 3 z Igą, ETF/Clicker, gołąb Szaman i 10 świecących piór. Zoo: pięć fok, pięć żółwi, fokowa klątwa, przebranie/odczarowanie przez Sandrę, 60 sekund TikToka.
+H. Tom: siedem zwykłych ataków i trzy specjalne zależne od grobu. Czerwony telegraph dla Łapy Gniewu, łatwa do uniknięcia powolna fala Pentagramu. Dwie fazy, trans Sandry, klony i kartka „gaźnik”, echa uwalniane nożycami, Lila (sprzymierzona lub wróg), duchy i znicz. Boss nie może wymagać refleksu profesjonalnego gracza.
+I. Siedem zakończeń dokładnie wg najnowszego kanonu. E1: po pokonaniu Toma dynia pokazuje mechanizm; Sandra ginie przy drodze, Aleks ranny na krzyżu; DOPIERO POTEM Alex przez X i Salsa przechodzą w kolejny cykl. E2: Arena → omdlenie → OBOJE w SZPITALU po wspólnym śnie i wypadku po imprezie. E3 zdrada Sandry, E4 nóż w plecy, E5 poświęcenie Lili, E6 zdrada (pusty świat roboczy), E7 walka z dynią i wolność. NIE dawaj menu końcowego. Resolver oparty o state i testy, używany tylko we właściwych momentach.
+J. Zapis wersjonowany, checkpointy, brak softlocków, tryb bez mikrofonu, testy przechodzenia z niedoborem wyposażenia. Rzeczy opcjonalne nie mogą blokować głównej fabuły.
+K. Optymalizacja dla laptopów: utrzymaj jakość 3D ASCII i czytelne sylwetki, ogranicz koszty CPU, instancing i pooling gdzie wskazane, skalowanie render-targetu bez degradacji HUD, stabilna logika niezależna od FPS. Cel 60 FPS normalnie / grywalne 30 FPS na słabszym, ale NIE przedstawiaj ich jako zmierzonych. 1366×768 i 1920×1080 oraz scene stress-tests.
+
+TESTY ODBIORCZE (wykonaj, nie opisuj w trybie przypuszczającym):
+- uruchomienie i build, testy jednostkowe, scenariusze e2e/state; rzeczywiste lub zautomatyzowane przejście od prologu do napisów;
+- 7 osiągalnych zakończeń, brak menu wyboru endingów, kolizje E3/E4/E6, jednorazowość E2 w odpowiednim punkcie;
+- widoczność Mściciela jeszcze na cmentarzu, oba warianty krzyża, wszystkie groby, znicz, nożyce, broń, pancerz, kooperacja i odczarowanie foki;
+- wspólny wybór zwierzęcia (niezależne blokuje postęp), wskrzeszenia, karaoke bez mikrofonu, gołąb/10 piór, Lila i co najmniej dwa echa;
+- E1 bez przedwczesnego spotkania Alexa X/Salsy, E2 ze szpitalem i wspólnym snem;
+- kontrola klawiatury z kilkoma klawiszami, pauzy, reload, zapisów, błędów konsoli, wydajności i czytelności na słabym ustawieniu.
+
+ZASADY PRACY I WYNIK:
+- Utrzymuj `docs/STATUS.md`, `docs/PLAN.md`, `docs/DECYZJE_ROBOCZE.md`, testy i notatki o regresjach. Jeśli sesja lub narzędzia zostaną ograniczone, zapisane postępy muszą umożliwić kontynuację; nie obiecuj działania w tle.
+- Pracuj etapami i wykonuj kolejne etapy, zamiast stawać po planie lub prototypie, dopóki warunki narzędzi i czas sesji na to pozwalają.
+- Tam, gdzie decyzja autora była niezamknięta, wybierz odwracalną i udokumentowaną implementację roboczą; nie przedstawiaj jej jako fabularnego kanonu.
+- Na końcu podaj realnie wdrożone moduły, uruchomione testy i ich wyniki, ścieżki zmienionych plików, realne pomiary FPS z nazwą sprzętu, nieukończone elementy i instrukcję uruchomienia. Nie deklaruj ukończenia całej gry, jeśli czegoś brakuje.

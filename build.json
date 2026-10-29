@@ -1,0 +1,35 @@
+{
+  "version": "V12-campaign-art-restored-2026-10-29",
+  "createdUTC": "2026-10-29T20:58:52.099552+00:00",
+  "htmlSHA256": "a41bac2a2451177878a6d662b56edd2ef45fa7a83e91daa3e2abf9626595eb90",
+  "reports": [
+    "campaign-act1-matrix",
+    "campaign-e2e",
+    "campaign-endings",
+    "campaign-zoo",
+    "campaign-mechanics",
+    "campaign-sidepaths",
+    "campaign-saves",
+    "campaign-inventory-quiz",
+    "campaign-final-regression",
+    "campaign-native-prologue",
+    "campaign-render-fallback",
+    "campaign-performance",
+    "campaign-soak",
+    "v12-shared-quiz"
+  ],
+  "notes": [
+    "Existing game extended; all seven endings automatic.",
+    "State/route tests may use accelerated simulation and explicit checkpoints; see tests/README.md.",
+    "Desktop Edge tested; no phone or physical laptop ghosting test.",
+    "Long-run report records its own source hash and scope; see STATUS.md.",
+    "Restored authored pumpkin/cobblestones/curved ASCII ramp; see latest STATUS entry. Earlier full-campaign/soak reports retain their original scope."
+  ],
+  "graphicsReports": [
+    "art-regression",
+    "art-performance",
+    "campaign-performance",
+    "campaign-smoke",
+    "campaign-render-fallback"
+  ]
+}

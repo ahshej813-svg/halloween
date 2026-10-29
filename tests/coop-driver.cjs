@@ -1,0 +1,16 @@
+module.exports=function(p,verbose=false){
+async function drain(){return p.evaluate(()=>{for(let i=0;i<100;i++){const g=__NOCTURNE.gameState();if(g.act.busy){__NOCTURNE.simulate(8);continue;}if(g.dialogue&&!document.querySelector('#next').hidden){document.querySelector('#next').click();continue;}return {game:g,play:__NOCTURNE.playState()};}throw Error('Dialogue loop')})}
+async function nav(x,z){const result=await p.evaluate(({x,z})=>{
+ const state=__NOCTURNE.playState(),routes=state.players.map((a,i)=>__NOCTURNE.pathTo(a.id,x+(i?.62:-.62),z));if(routes.some(a=>!a.length))throw Error('No route '+JSON.stringify({x,z,state,routes}));
+ const keyNames={KeyW:'w',KeyA:'a',KeyS:'s',KeyD:'d',ArrowUp:'ArrowUp',ArrowDown:'ArrowDown',ArrowLeft:'ArrowLeft',ArrowRight:'ArrowRight'},held=new Set(),bindings=[['KeyA','KeyD','KeyW','KeyS'],['ArrowLeft','ArrowRight','ArrowUp','ArrowDown']];
+ const release=()=>{for(const code of held)window.dispatchEvent(new KeyboardEvent('keyup',{code,key:keyNames[code],bubbles:true}));held.clear()};
+ for(let tick=0;tick<5000;tick++){const st=__NOCTURNE.playState(),g=__NOCTURNE.gameState();if(g.dialogue||g.act.busy||g.phase==='complete'){release();return {reason:'event',ticks:tick,state:st,game:g};}if(st.interact&&Math.hypot(st.interact.point.x-x,st.interact.point.z-z)<.3&&st.players.every(a=>Math.hypot(a.x-x,a.z-z)<=st.interact.radius)){release();return {reason:'interaction-range',ticks:tick,state:st};}if(st.objective==='escort'&&Math.hypot(x,z+43.5)<.3&&st.players.every(a=>Math.hypot(a.x,a.z+43.5)<2.4)){release();return {reason:'escort-area',ticks:tick,state:st};}const desired=new Set();
+  st.players.forEach((a,i)=>{const route=routes[i];while(route.length&&Math.hypot(a.x-route[0].x,a.z-route[0].z)<.13)route.shift();if(!route.length)return;const q=route[0],dx=q.x-a.x,dz=q.z-a.z,b=bindings[i];if(Math.abs(dx)>.05)desired.add(dx>0?b[1]:b[0]);if(Math.abs(dz)>.05)desired.add(dz>0?b[3]:b[2]);});
+  for(const code of held)if(!desired.has(code)){window.dispatchEvent(new KeyboardEvent('keyup',{code,key:keyNames[code],bubbles:true}));held.delete(code);}for(const code of desired)if(!held.has(code)){window.dispatchEvent(new KeyboardEvent('keydown',{code,key:keyNames[code],bubbles:true}));held.add(code);}
+  if(!routes.some(r=>r.length)){release();return {reason:'arrived',ticks:tick,state:st};}__NOCTURNE.simulate(1/60);
+ }release();throw Error('Navigation stalled '+JSON.stringify({x,z,routes,state:__NOCTURNE.playState()}));
+},{x,z});if(verbose)console.log('NAV',x,z,result.reason,result.ticks,result.state.objective);return result;}
+async function choose(id){await p.locator(`[data-choice=${id}]`).click();return drain()};async function interact(){await p.keyboard.press('e');return drain()};async function shot(name){await p.waitForTimeout(100);await p.screenshot({path:`work/coop-${name}.png`});}
+
+return {drain,nav,choose,interact,shot};
+};

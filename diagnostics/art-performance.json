@@ -1,0 +1,30 @@
+{
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "reports": [
+    {
+      "scene": "animated-pumpkin",
+      "fps": 57.53816476535737,
+      "samples": 173,
+      "geometry": {
+        "backend": "webgl2-triangles",
+        "draws": 2,
+        "capacity": 262144
+      }
+    },
+    {
+      "scene": "path",
+      "fps": 59.99999999999999,
+      "samples": 180,
+      "geometry": {
+        "backend": "webgl2-triangles",
+        "draws": 2,
+        "capacity": 262144
+      }
+    }
+  ],
+  "errors": [],
+  "note": "Actual headless Edge frames on local PC, three-second animated prologue sample and live path; not a full-story or low-end hardware guarantee."
+}

@@ -1,0 +1,45 @@
+{
+  "audio": {
+    "enabled": true,
+    "state": "running",
+    "speechActive": true,
+    "events": [
+      "Sandra:speech:Microsoft Paulina - Polish (Poland)",
+      "crow",
+      "Sandra:voice-start",
+      "Aleks:speech:Microsoft Adam - Polish (Poland)",
+      "Sandra:voice-skipped",
+      "Aleks:voice-start",
+      "crow"
+    ]
+  },
+  "hiddenClock": true,
+  "frames": {
+    "intro": {
+      "samples": 125,
+      "median": 34.70000000000073,
+      "p95": 34.80000000000109,
+      "gpu": true
+    },
+    "walk": {
+      "samples": 125,
+      "median": 34.70000000000073,
+      "p95": 48.70000000000073,
+      "gpu": true
+    },
+    "cross": {
+      "samples": 125,
+      "median": 34.69999999999709,
+      "p95": 55.599999999998545,
+      "gpu": true
+    },
+    "grave": {
+      "samples": 125,
+      "median": 34.70000000000073,
+      "p95": 48.70000000000073,
+      "gpu": true
+    }
+  },
+  "standalone": true,
+  "errors": []
+}

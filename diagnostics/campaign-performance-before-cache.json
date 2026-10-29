@@ -1,0 +1,235 @@
+{
+  "hardware": {
+    "cpu": "11th Gen Intel(R) Core(TM) i5-11400F @ 2.60GHz",
+    "ramGB": 16,
+    "platform": "win32"
+  },
+  "reports": [
+    {
+      "scene": "storm",
+      "quality": "low",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "samples": 56,
+      "fps": 27.3357414819877,
+      "median": 34.80000000000018,
+      "p95": 41.70000000000027,
+      "mode": "walk",
+      "gpu": true
+    },
+    {
+      "scene": "zoo",
+      "quality": "low",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "samples": 103,
+      "fps": 30.024777729193993,
+      "median": 34.69999999999982,
+      "p95": 34.80000000000018,
+      "mode": "zoo-ready",
+      "gpu": true
+    },
+    {
+      "scene": "boss",
+      "quality": "low",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "samples": 102,
+      "fps": 29.97619537426162,
+      "median": 34.70000000000073,
+      "p95": 34.80000000000109,
+      "mode": "boss",
+      "gpu": true
+    },
+    {
+      "scene": "pigeons",
+      "quality": "low",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "samples": 51,
+      "fps": 29.97355274757567,
+      "median": 34.70000000000073,
+      "p95": 34.80000000000109,
+      "mode": "pigeon-fall",
+      "gpu": true
+    },
+    {
+      "scene": "storm",
+      "quality": "high",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "samples": 74,
+      "fps": 30.62026730665785,
+      "median": 34.70000000000073,
+      "p95": 34.899999999999636,
+      "mode": "walk",
+      "gpu": true
+    },
+    {
+      "scene": "zoo",
+      "quality": "high",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "samples": 113,
+      "fps": 32.806874927418406,
+      "median": 27.80000000000291,
+      "p95": 34.80000000000291,
+      "mode": "zoo-ready",
+      "gpu": true
+    },
+    {
+      "scene": "boss",
+      "quality": "high",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "samples": 203,
+      "fps": 58.57909620822997,
+      "median": 14,
+      "p95": 20.900000000001455,
+      "mode": "boss",
+      "gpu": true
+    },
+    {
+      "scene": "pigeons",
+      "quality": "high",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "samples": 106,
+      "fps": 59.86333088609022,
+      "median": 14,
+      "p95": 20.900000000001455,
+      "mode": "pigeon-fall",
+      "gpu": true
+    },
+    {
+      "scene": "storm",
+      "quality": "low",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "samples": 71,
+      "fps": 29.294054544704373,
+      "median": 34.70000000000073,
+      "p95": 48.70000000000073,
+      "mode": "walk",
+      "gpu": true
+    },
+    {
+      "scene": "zoo",
+      "quality": "low",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "samples": 103,
+      "fps": 29.962764719571805,
+      "median": 34.70000000000073,
+      "p95": 34.80000000000291,
+      "mode": "zoo-ready",
+      "gpu": true
+    },
+    {
+      "scene": "boss",
+      "quality": "low",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "samples": 102,
+      "fps": 30.03622014782537,
+      "median": 34.69999999999709,
+      "p95": 34.80000000000291,
+      "mode": "boss",
+      "gpu": true
+    },
+    {
+      "scene": "pigeons",
+      "quality": "low",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "samples": 52,
+      "fps": 29.952191694026865,
+      "median": 34.69999999999709,
+      "p95": 34.80000000000291,
+      "mode": "pigeon-fall",
+      "gpu": true
+    },
+    {
+      "scene": "storm",
+      "quality": "high",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "samples": 85,
+      "fps": 34.87322556822842,
+      "median": 27.799999999995634,
+      "p95": 34.80000000000291,
+      "mode": "walk",
+      "gpu": true
+    },
+    {
+      "scene": "zoo",
+      "quality": "high",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "samples": 94,
+      "fps": 27.62349760498403,
+      "median": 34.799999999995634,
+      "p95": 55.5,
+      "mode": "zoo-ready",
+      "gpu": true
+    },
+    {
+      "scene": "boss",
+      "quality": "high",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "samples": 151,
+      "fps": 43.83672995413112,
+      "median": 20.900000000001455,
+      "p95": 27.900000000001455,
+      "mode": "boss",
+      "gpu": true
+    },
+    {
+      "scene": "pigeons",
+      "quality": "high",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "samples": 106,
+      "fps": 60.094109643403776,
+      "median": 14,
+      "p95": 20.900000000001455,
+      "mode": "pigeon-fall",
+      "gpu": true
+    }
+  ],
+  "errors": [],
+  "note": "Actual headless Edge frame intervals on this machine; not a physical low-end laptop or two-person hardware ghosting test."
+}

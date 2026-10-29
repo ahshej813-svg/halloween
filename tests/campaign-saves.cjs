@@ -1,0 +1,11 @@
+process.chdir(require('path').resolve(__dirname,'..'));
+const {chromium}=require('playwright'),assert=require('assert/strict'),fs=require('fs'),driver=require('./campaign-driver.cjs');
+(async()=>{
+ const b=await chromium.launch({headless:true,channel:'msedge'}),p=await b.newPage({viewport:{width:1920,height:1080}}),errors=[],reports=[];p.on('pageerror',e=>errors.push(e.message));await p.addInitScript(()=>{window.AudioContext=null;window.webkitAudioContext=null;speechSynthesis.speak=()=>{}});await p.goto('http://127.0.0.1:8000/');const d=driver(p);
+ for(const mode of ['duel','karaoke','animal','zoo','road','training','prepare','boss','trance','ritual']){
+  await p.evaluate(mode=>__NOCTURNE.campaignCheckpoint(mode,{aleks:'food',sandra:'tom'},{animal:'lila'}),mode);await d.drain();
+  if(await p.locator('[data-choice=gabrys-agree]').count()){await d.choose('gabrys-agree');await d.choose('sandra-gabrys-yes');}
+  assert(await p.evaluate(()=>__NOCTURNE.saveCheckpoint()),mode);const before=await p.evaluate(()=>__NOCTURNE.checkpointState());assert.equal(before.version,2);await p.reload();assert(await p.locator('#resume-checkpoint').isVisible(),mode);await p.locator('#resume-checkpoint').click();const after=await p.evaluate(()=>__NOCTURNE.campaignState());assert.equal(after.mode,before.journey.mode,mode);assert.equal(after.animal,before.journey.animal);assert.deepEqual(after.weapon,before.journey.weapon);assert.equal((await p.evaluate(()=>__NOCTURNE.inventoryState())).bag.sandra.id,'tom');assert.equal((await p.evaluate(()=>__NOCTURNE.gameState())).act.tool,true);reports.push({mode,restored:after.mode,passed:true});
+ }
+ const invalid=await p.evaluate(()=>{const s=__NOCTURNE.checkpointState();s.journey.mode='unknown-mode';return JSON.stringify(s);});await p.keyboard.press('r');await p.evaluate(s=>localStorage.setItem('halloween.checkpoint.v1',s),invalid);await p.reload();assert(!(await p.locator('#resume-checkpoint').isVisible()));assert.equal(errors.length,0,errors.join('\n'));fs.writeFileSync('diagnostics/campaign-saves.json',JSON.stringify({reports,corruptRejected:true,errors},null,2));console.log('10 campaign checkpoint modes and corrupted-state fallback PASS');await b.close();
+})().catch(e=>{console.error(e);process.exit(1)});

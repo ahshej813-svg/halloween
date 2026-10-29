@@ -1,0 +1,393 @@
+{
+  "milestones": [
+    "normal prologue handoff",
+    "entire act I and catastrophe",
+    "three questions and Chrupek",
+    "four training waves",
+    "zoo and consequence recovery",
+    "empty return road, clone identification, trance",
+    "Tom defeated through combat inputs",
+    "E1 tragedy, next pair, epilogue and credits"
+  ],
+  "errors": [],
+  "state": {
+    "zone": "road",
+    "mode": "credits",
+    "clock": 293.7121063247718,
+    "at": 293.7121063247718,
+    "hp": [
+      74.80000000000001,
+      74.80000000000001
+    ],
+    "maxHP": [
+      100,
+      100
+    ],
+    "attackAt": [
+      248.69930632472972,
+      248.69930632472972
+    ],
+    "dodgeAt": [
+      -10,
+      -10
+    ],
+    "invul": [
+      234.04930632474355,
+      234.0226396580769
+    ],
+    "specialAt": [
+      -20,
+      -20
+    ],
+    "weapon": [
+      "fists",
+      "fists"
+    ],
+    "armor": [
+      "none",
+      "none"
+    ],
+    "mobs": [],
+    "hazards": [],
+    "projectiles": [],
+    "pickups": [],
+    "feathers": [],
+    "collected": [],
+    "debt": false,
+    "paid": false,
+    "buried": null,
+    "sandraSacrificed": false,
+    "grudge": false,
+    "graveTone": "kind",
+    "insult": null,
+    "candle": true,
+    "animal": "chrupek",
+    "lilaTamed": false,
+    "lilaDemon": false,
+    "chrupek": false,
+    "inkDebuff": [
+      false,
+      false
+    ],
+    "echoes": [
+      {
+        "id": 0,
+        "x": -7,
+        "z": -12,
+        "hold": 0
+      },
+      {
+        "id": 1,
+        "x": 7,
+        "z": -12,
+        "hold": 0
+      },
+      {
+        "id": 2,
+        "x": -7,
+        "z": -5,
+        "hold": 0
+      },
+      {
+        "id": 3,
+        "x": 7,
+        "z": -5,
+        "hold": 0
+      }
+    ],
+    "echoRuns": [],
+    "echoesRescued": 0,
+    "ghost": null,
+    "zoo": {
+      "count": 5,
+      "greeted": [],
+      "aleksWon": true,
+      "sandraWon": false,
+      "deadline": 127.94575106639688
+    },
+    "seal": false,
+    "sealHits": 0,
+    "phoneClip": 0,
+    "arenaElapsed": 0,
+    "arenaChallenge": null,
+    "mini": {
+      "sequence": [
+        "ArrowUp",
+        "ArrowLeft",
+        "ArrowRight",
+        "ArrowDown",
+        "ArrowUp",
+        "ArrowRight",
+        "ArrowLeft",
+        "ArrowDown",
+        "ArrowUp",
+        "ArrowLeft",
+        "ArrowDown",
+        "ArrowRight"
+      ],
+      "progress": 12
+    },
+    "boss": {
+      "hp": 0,
+      "maxHP": 1200,
+      "index": 6,
+      "next": 250.5259729914011,
+      "shielded": false,
+      "graveUsed": false
+    },
+    "ritual": null,
+    "ending": 1,
+    "endingShot": 2,
+    "finished": true,
+    "flags": {
+      "pressureAt": null,
+      "revive0": 0,
+      "revive1": 0,
+      "pendingVictim": null,
+      "chrupekDropAt": 171.7092999999777,
+      "igaDark": true,
+      "roomComplete": true,
+      "trainingWave": 4,
+      "combo-Cień korzeni-0": {
+        "last": [
+          64.72381773306306,
+          64.72381773306306
+        ],
+        "bonus": 64.72381773306306
+      },
+      "combo-Opętana wrona-1": {
+        "last": [
+          65.17715106639646,
+          65.17715106639646
+        ],
+        "bonus": 65.17715106639646
+      },
+      "combo-Mogiłowy cień-2": {
+        "last": [
+          66.53715106639667,
+          -10
+        ],
+        "bonus": -10
+      },
+      "combo-Kościana ręka-3": {
+        "last": [
+          -10,
+          66.08381773306327
+        ],
+        "bonus": -10
+      },
+      "combo-Żółw marionetka-4": {
+        "last": [
+          67.89715106639689,
+          -10
+        ],
+        "bonus": -10
+      },
+      "combo-Echo pętli-5": {
+        "last": [
+          -10,
+          67.89715106639689
+        ],
+        "bonus": -10
+      },
+      "trainingDone": true,
+      "combo-Foka-0": {
+        "last": [
+          69.71445106639716,
+          -10
+        ],
+        "bonus": -10
+      },
+      "combo-Foka-1": {
+        "last": [
+          70.62111773306397,
+          -10
+        ],
+        "bonus": -10
+      },
+      "combo-Foka-2": {
+        "last": [
+          71.52778439973078,
+          -10
+        ],
+        "bonus": -10
+      },
+      "combo-Foka-3": {
+        "last": [
+          72.43445106639759,
+          -10
+        ],
+        "bonus": -10
+      },
+      "combo-Foka-4": {
+        "last": [
+          73.3411177330644,
+          -10
+        ],
+        "bonus": -10
+      },
+      "cloneWrong": false,
+      "nextTranceWave": 198.81080632477685,
+      "lastGhost": 227.499306324749,
+      "combo-tom": {
+        "last": [
+          248.69930632472972,
+          248.69930632472972
+        ],
+        "bonus": 246.88597299139803
+      }
+    },
+    "used": {},
+    "preAnimal": {
+      "journey": {
+        "zone": null,
+        "mode": "walk",
+        "clock": 49.39945106639689,
+        "at": 0,
+        "hp": [
+          100,
+          100
+        ],
+        "maxHP": [
+          100,
+          100
+        ],
+        "attackAt": [
+          -10,
+          -10
+        ],
+        "dodgeAt": [
+          -10,
+          -10
+        ],
+        "invul": [
+          0,
+          0
+        ],
+        "specialAt": [
+          -20,
+          -20
+        ],
+        "weapon": [
+          "fists",
+          "fists"
+        ],
+        "armor": [
+          "none",
+          "none"
+        ],
+        "mobs": [],
+        "hazards": [],
+        "projectiles": [],
+        "pickups": [],
+        "feathers": [],
+        "collected": [],
+        "debt": false,
+        "paid": false,
+        "buried": null,
+        "sandraSacrificed": false,
+        "grudge": false,
+        "graveTone": "kind",
+        "insult": null,
+        "candle": true,
+        "animal": null,
+        "lilaTamed": false,
+        "lilaDemon": false,
+        "chrupek": false,
+        "inkDebuff": [
+          false,
+          false
+        ],
+        "echoes": [],
+        "echoRuns": [],
+        "echoesRescued": 0,
+        "ghost": null,
+        "zoo": null,
+        "seal": false,
+        "sealHits": 0,
+        "phoneClip": 0,
+        "arenaElapsed": 0,
+        "arenaChallenge": null,
+        "mini": null,
+        "boss": null,
+        "ritual": null,
+        "ending": null,
+        "endingShot": 0,
+        "finished": false,
+        "flags": {
+          "pressureAt": null,
+          "revive0": 0,
+          "revive1": 0,
+          "pendingVictim": null
+        },
+        "used": {},
+        "preAnimal": null
+      },
+      "players": [
+        {
+          "id": "aleks",
+          "x": -2,
+          "z": -6.4,
+          "heading": 3.141592653589793,
+          "walk": 763.8400000000952,
+          "moving": false,
+          "writingAt": 171.18849999997752
+        },
+        {
+          "id": "sandra",
+          "x": 2,
+          "z": -6.4,
+          "heading": 3.141592653589793,
+          "walk": 765.8400000000959,
+          "moving": false,
+          "writingAt": 171.3620999999776
+        }
+      ],
+      "chapter": {
+        "active": true,
+        "phase": "room",
+        "victim": "boris",
+        "seated": {
+          "aleks": true,
+          "sandra": true
+        },
+        "quiz": {
+          "open": true,
+          "round": 1,
+          "cursor": {
+            "aleks": 0,
+            "sandra": 0
+          },
+          "answers": [
+            {
+              "aleks": 0,
+              "sandra": 0
+            },
+            {
+              "aleks": null,
+              "sandra": null
+            }
+          ],
+          "ink": {
+            "aleks": "pen",
+            "sandra": "pen"
+          },
+          "complete": false,
+          "animal": null
+        },
+        "used": [],
+        "inventory": {
+          "aleks": {
+            "id": "pen",
+            "used": true
+          },
+          "sandra": {
+            "id": "pen",
+            "used": true
+          }
+        },
+        "loadout": false
+      }
+    }
+  }
+}

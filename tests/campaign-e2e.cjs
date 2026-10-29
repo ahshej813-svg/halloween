@@ -1,0 +1,25 @@
+process.chdir(require('path').resolve(__dirname,'..'));
+const {chromium}=require('playwright'),assert=require('assert/strict'),fs=require('fs'),driver=require('./campaign-driver.cjs'),room=require('./act2-test-driver.cjs');
+(async()=>{
+ const b=await chromium.launch({headless:true,channel:'msedge'}),p=await b.newPage({viewport:{width:1366,height:768}}),errors=[],milestones=[];
+ p.on('pageerror',e=>errors.push(e.message));p.on('console',m=>{if(m.type()==='error')errors.push(m.text());});await p.addInitScript(()=>{window.AudioContext=null;window.webkitAudioContext=null;speechSynthesis.speak=()=>{}});await p.goto('http://127.0.0.1:8000/');const d=driver(p),state=()=>p.evaluate(()=>__NOCTURNE.campaignState());
+ await p.locator('[data-owner=aleks][data-item=pen]').click();await p.locator('[data-owner=sandra][data-item=pen]').click();await p.locator('[data-confirm=aleks]').click();await p.locator('[data-confirm=sandra]').click();await p.locator('#depart').click();await p.evaluate(()=>{__NOCTURNE.seek(32.85);__NOCTURNE.resume();});await p.waitForFunction(()=>__NOCTURNE.playState().active);await d.drain();milestones.push('normal prologue handoff');
+ await d.nav(0,-12);await d.drain();await p.locator('[data-target=gabrys]').click();await d.drain();await d.nav(0,-59.2);await d.drain();await d.choose('help');
+ for(let n=0;n<10;n++){
+  const s=await p.evaluate(()=>__NOCTURNE.playState());if(s.stage==='escort')break;
+  if(s.objective==='house'){await d.nav(10,-36.2);await d.interact();}else if(s.objective==='house-table'){await d.nav(.8,-2.8);await d.interact();await d.choose('take');}else if(s.objective==='leave-house'){await d.nav(0,2.65);await d.interact();}else if(s.objective==='rescue'){await d.nav(0,-59.2);await d.interact();}else if(s.objective==='grave'){await d.nav(-5.2,-54.75);await d.interact();await d.choose('grave-kind');await d.choose('candle-yes');}else throw Error('Unexpected act I '+JSON.stringify(s));
+ }
+ await d.nav(0,-43.5);await p.evaluate(()=>__NOCTURNE.simulate(35));await d.drain();await d.choose('boris');await d.choose('confirm-victim');await room(p).drain();assert.equal((await p.evaluate(()=>__NOCTURNE.playState())).space,'catacombs');milestones.push('entire act I and catastrophe');
+ await room(p).seat();await p.locator('[data-owner=aleks][data-answer="0"]').click();await p.locator('[data-owner=sandra][data-answer="0"]').click();await d.drain();await p.locator('[data-owner=aleks][data-answer="0"]').click();await p.locator('[data-owner=sandra][data-answer="0"]').click();await p.locator('#leave-quiz').click();await d.drain();
+ await d.walkTo(0,-4);await p.keyboard.press('e');await d.drain();await d.choose('leave-chrupek');await d.drain();for(const i of [0,1,3])await p.locator(`[data-jaction=iga-${i}]`).click();await p.locator('[data-jaction=iga-2]').click();await d.drain();milestones.push('three questions and Chrupek');
+ await d.walkTo(0,-11);await p.keyboard.press('e');await d.drain();await d.fight();await d.drain();assert.equal((await state()).mode,'zoo-ready');milestones.push('four training waves');
+ await p.keyboard.press('e');assert.equal((await state()).mode,'zoo');await d.fight(120);await d.drain();if((await state()).mode==='retry')throw Error('Zoo controller died');
+ if((await state()).mode==='zoo'){for(let i=0;i<5;i++){await d.walkTo(i%2?7:3,-4-i*2,'sandra');await p.keyboard.press('Enter');}await p.evaluate(()=>__NOCTURNE.simulate(.1));await d.drain();}
+ if((await state()).mode==='phone'){await p.evaluate(()=>__NOCTURNE.simulate(61));await d.drain();}
+ if((await state()).mode==='unseal'){await d.walkTo(-.5,1.5,'aleks');await d.walkTo(.5,1.5,'sandra');await p.keyboard.down('ShiftRight');await p.evaluate(()=>__NOCTURNE.simulate(2));await p.keyboard.up('ShiftRight');await d.drain();}
+ assert.equal((await state()).mode,'return');milestones.push('zoo and consequence recovery');
+ await d.walkTo(0,-23);await p.keyboard.press('e');await d.drain();assert.equal((await state()).mode,'clones');await p.keyboard.press('2');await d.drain();for(const code of (await state()).mini.sequence)await p.keyboard.press(code);await d.drain();assert.equal((await state()).mode,'prepare');milestones.push('empty return road, clone identification, trance');
+ await d.walkTo(0,-14);await p.keyboard.press('e');assert.equal((await state()).mode,'boss');await d.screenshot('full-boss');await d.fight(500);await d.drain();assert.equal((await state()).mode,'last-escape');milestones.push('Tom defeated through combat inputs');
+ await p.keyboard.down('w');await p.keyboard.down('ArrowUp');await p.evaluate(()=>__NOCTURNE.simulate(46));await p.keyboard.up('w');await p.keyboard.up('ArrowUp');await d.drain();assert.equal((await state()).ending,1);assert((await state()).finished);assert(await p.locator('#ending-card').isVisible());milestones.push('E1 tragedy, next pair, epilogue and credits');assert.equal(errors.length,0,errors.join('\n'));
+ fs.writeFileSync('diagnostics/campaign-e2e.json',JSON.stringify({milestones,errors,state:await state()},null,2));console.log(JSON.stringify({milestones,errors}));await b.close();
+})().catch(e=>{console.error(e);process.exit(1)});

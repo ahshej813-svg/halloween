@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "world inventory/position; reload; keyboard resume",
+    "partial trust and individual ink",
+    "disagreement reload and recovery",
+    "completed quiz and room movement",
+    "full reset clears loop checkpoint",
+    "malformed, unsupported version and out-of-range records"
+  ],
+  "errors": []
+}

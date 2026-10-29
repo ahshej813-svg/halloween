@@ -1,0 +1,12 @@
+{
+  "reports": [
+    {
+      "target": "gabrys",
+      "order": "help",
+      "item": "take",
+      "strangerDead": true,
+      "hint": true
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,12 @@
+{
+  "checks": [
+    "only Sandra greets her turtles",
+    "pause stops clock and returning to page preserves speech pause",
+    "blur clears movement",
+    "restore default controls",
+    "malformed preferences recover working controls",
+    "secret failure retries its current phase",
+    "six owner-specific meows clear Arena and continue"
+  ],
+  "errors": []
+}
